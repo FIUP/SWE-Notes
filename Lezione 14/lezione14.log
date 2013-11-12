@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.11)  12 NOV 2013 15:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.11)  12 NOV 2013 16:44
 entering extended mode
 **lezione14.tex
-("C:\Users\Luca\Università\SWE\Appunti\Lezione 14\lezione14.tex"
+("C:\Users\Luca\Università\SWE-Notes\Lezione 14\lezione14.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -104,7 +104,7 @@ File: utf8x.def 2004/10/17 UCS: Input encoding UTF-8
 ))
 \c@homeworkProblemCounter=\count90
 
-("C:\Users\Luca\Università\SWE\Appunti\Lezione 14\lezione14.aux")
+("C:\Users\Luca\Università\SWE-Notes\Lezione 14\lezione14.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 127.
 LaTeX Font Info:    ... okay on input line 127.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 127.
@@ -147,95 +147,3 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 129.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 129.
- [1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("C:\Users\Luca\Università\SWE\Appunti\Lezione 14\lezione14.toc"
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
-)
-\tf@toc=\write3
- [2]
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ucs\uni-0.def"
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-)
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 151.
-
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 151.
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--185
-
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
-
- []
-
-[5] 
-AED: lastpage setting LastPage
-[6] ("C:\Users\Luca\Università\SWE\Appunti\Lezione 14\lezione14.aux") ) 
-Here is how much of TeX's memory you used:
- 2304 strings out of 493921
- 30716 string characters out of 3144878
- 180621 words of memory out of 3000000
- 5597 multiletter control sequences out of 15000+200000
- 9194 words of font info for 32 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 27i,10n,43p,932b,478s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on lezione14.pdf (6 pages, 115564 bytes).
-PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
-
