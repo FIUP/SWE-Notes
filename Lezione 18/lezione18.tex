@@ -53,7 +53,7 @@ L'intento è fare scelte buone, cossichè venga ridotto al minimo lo sforzo della 
 \includegraphics[width=0.75\columnwidth]{img1} % Example image
 \end{center}
 
-C'è un'apertura molto grande fatta per frazionamento (\textit{approccio investigativo}}) tipico dell'analista. Tutto non è necessariamente esplicito. Il lavoro del progettista è l'esatto opposto, deve riportare a sintesi i requisiti spezzettati e proporre una delle possibili soluzioni al problema, argomentando il valore di quella soluzione. Si torna da un punto singolare ad un punto singolare. L'analista ha fatto un buon lavoro se i requisiti sono tutti \textbf{tracciabili} e \textbf{verificabili}.\\
+C'è un'apertura molto grande fatta per frazionamento (\textit{approccio investigativo}) tipico dell'analista. Tutto non è necessariamente esplicito. Il lavoro del progettista è l'esatto opposto, deve riportare a sintesi i requisiti spezzettati e proporre una delle possibili soluzioni al problema, argomentando il valore di quella soluzione. Si torna da un punto singolare ad un punto singolare. L'analista ha fatto un buon lavoro se i requisiti sono tutti \textbf{tracciabili} e \textbf{verificabili}.\\
 Dijkstra afferma che il compito che sta a un progettista di fare in modo che soddisfi i nostri bisogni è fatto di due parti:
 
 \begin{itemize}
@@ -109,8 +109,46 @@ Assunto di aver capito  questo, cerchiamo quali sono le qualità da perseguire in
 
 \begin{itemize}
 
-	\item
+	\item \textbf{Sufficienza}, ho tutto ciò che mi serve;
+	\item \textbf{Comprensibilità}, non dev'essere astratto ma comprensibile agli stakeholder, tutto deve risultare chiaro;
+	\item \textbf{Modularità}, fatta di parti facilmente riproducibili e distinte;
+	\item \textbf{Robustezza}, se per caso un modulo fallisce non deve cadere l'intero sistema, non possiamo assumere che tutti i programmatori non commettano errori;
+	\item \textbf{Flessibilità}, il maggior valore di un prodotto è \textbf{per quanto esso è in uso}. L'uso lungo richiederà manutenzione. Bisognerà avere una struttura che permette facilmente l'adattamento,;
+	\item \textbf{Riusabilità}, architettura riadattabile a molti altri sistemi, sia nell'insieme che nelle parti;
+	\item \textbf{Efficienza} nel tempo, nello spazio, nelle comunicazioni. Consumare il meno possibile.
+	\item \textbf{Affidabilità}, nessun \textit{effetto sorpresa}, riesco a fare ciò che è atteso;
+	\item \textbf{Disponibilità}, necessita di poco o nullo tempo di manutenzione \textit{fuori linea};
+	\item \textbf{Sicurezza rispetto a intrusioni};
+	\item \textbf{Sicurezza rispetto al funzionamento};
+	\item \textbf{Semplicità}, ogni parte contiene il necessario e niente di \textit{superfluo};
+	\item \textbf{Incapsulamento} (information hiding), nascondo il dettaglio, mostro solo il necessario. Tutto ciò che non è rilevante lo nascondo;
+	\item \textbf{Coesione}, le parti che stanno insieme hanno gli stessi obiettivi;
+	\item \textbf{Basso accoppiamento}, una modifica ha impatto minimo con gli altri. Le modifiche locali non devono avere effetto sul globale.
 
-\end{itemize}}
+\end{itemize}
+
+Soffermiamoci sulla \textbf{semplicità}. ``\textit{La mplteplicità non è da assumere senza la necessità}'', principio di rimozione, devo togliere tutto ciò che non è necessario. Principio noto come ``\textit{il rasoio di Occam}''. ``\textit{Ogni cosa dovrebbe essere il più semplice possibile, ma non di più}'' (Albert Einstein).\\
+L'incapsulamento è un grande beneficio per la manutenzione, perchè i cambi locali hanno poca influenza sul globale. Questo è il principio del \textit{black box}''.\\
+L'accoppiamento è il processo per il quale io dipendo dall'esterno, e questo è misurabile. E' fatto da due cose: \textbf{utilità} e \textbf{bisogno}. Massimo di utilità e minimo di indipendenza.
+
+\begin{center}
+\includegraphics[width=0.75\columnwidth]{img2} % Example image
+\end{center}
+
+All'inizio della progettazione devo avere sicuramente uno stile architetturale, ma dopo devo scegliere un \textit{approccio progettuale} al sistema. Decomporre il sistema e identificarne le parti (\textbf{top-down}); ma questo non è lo stile \textit{object-oriented} che invece è \textbf{bottom-up}. Inizia da parti già esistenti e le specializza (principio del \textbf{riuso}). Per fare progettazione bottom-up serve molta esperienza, l'alternativa è spezzare in parti più semplici. L'approccio normalmente utilizzato è un \textbf{compromesso} fra queste due tecniche, \textbf{meet-in-the-middle}, un approccio intermedio, ed è quello più frequentemente utilizzato.\\
+Il riuso ha due forme:
+
+\begin{itemize}
+
+	\item \textbf{Riuso interno}, uso cose che ho fatto io;
+	\item \textbf{Riuso esterno}, uso cose già fatte da altri.
+
+\end{itemize}
+
+Il primo atteggiamento è guardare fuori se ci sono cose utili e abbastanza solide. E' delirante pensare di progettare in proprio. Oggi è sempre più inevitabile/intelligente utilizzare il riuso, soprattutto quello esterno.\\\\
+
+Un \textbf{framework} è il ``quadro di lavoro'', un insieme integrato di componenti software prefabbricate. Impongo un'organizzazione, ciascuno si deve adattare ad esso, usare il suo stile architetturale. Nel mondo \textit{pre-oo} erano chiamate \textbf{librerie}. Mi aiuta a fare delle cose e mi impone uno stile che è stato definito \textbf{buono}. Un framework diventa buono se è giudicato tale dalla comunità dei suoi utenti (presumibilmente utenti esperti).\\\\
+
+Un \textbf{pattern} lo possiamo intendere come un \textit{motivo}, uno \textit{stile ricorrente} che sappiamo riconoscere e che ha un ruolo preciso. Vogliamo portare un pattern dentro una progettazione architetturale. E' molto importante affidarci ad un pattern. Questo concetto è stato donato al mondo del software da \textit{C. Alexander} nel 1979. Al giorno d'oggi un buon progettista software deve assolutamente conoscere i pattern e la loro utilità.
 
 \end{document}
