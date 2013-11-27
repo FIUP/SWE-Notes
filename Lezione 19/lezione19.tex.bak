@@ -1,0 +1,105 @@
+\input{../Templates/layout}
+\input{../Templates/commands}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\lessonAuthor{Luca De Franceschi}} % Top left header
+\chead{\lessonAuthor{Tullio Vardanega}\ \lessonTime{11:30}: \lessonNumber{19}} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\lessonNumber{19}}\\
+\normalsize\vspace{0.1in}\small{\lessonDate{Mercoledì}{20}{Novembre}{2013}}\\
+\vspace{0.1in}\large{\textit{\lessonTeacher{Tullio Vardanega},\ \lessonTime{11:30-13:15}}}
+\vspace{3in}
+}
+}
+
+\author{\textbf{\lessonAuthor{Luca De Franceschi}}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+\newpage
+\newpage
+
+Facciamo alcuni esempi di architetture sw. Il progettista fissa quanti livelli servono e le interfacce che interagiscono tra questi livelli. Fissa una regola di dialogo sui livelli in modo da avere interazioni utili. Dentro ciascuna scatola le informazioni sono completamente incapsulate.
+
+\begin{center}
+\includegraphics[width=0.75\columnwidth]{img1} % Example image
+\end{center}
+
+Tra l'interfaccia utente ed il modello dei dati c'è un supporto a specifiche procedure che forniscono la logica d'applicazione. Si vorrebbe scrivere una logica applicativa che non dipenda dalla base dati specifica, e questa cosa ce la fornisce il \textbf{framework}.\\
+Architettura di relazione, \textbf{MVC-2}.
+
+\begin{center}
+\includegraphics[width=0.75\columnwidth]{img2} % Example image
+\end{center}
+
+L'errore grande che si può fare è quello di pensare di fare una documentazione non tecnica o narrativa. Scriveremo testi basati su una sequenza di diagrammi e poche frasi di collegamento. Questo documento ha un suo linguaggio. Per componente si intende un elemento dell'architettura con delle interfacce chiare e formate. Relazioni tra più componenti espresse con delle frecce. Una \textbf{parte} è un'interfaccia esposta da una componente architetturale. Un \textbf{connettore} è una conenessione tra più parti (in UML si chiama \textit{associazione}). E' importante capire che l'architettura dev'essere valutata per la sua \textbf{qualità}. Cercheremo metodi utili e ambienti di progettazione che questi metodi importano. Questo perchè perseguiamo \textit{qualità by construction}. Vogliamo che la \textbf{baseline} sia pulita e quindi bisogna verificare che l'architettura lo sia. La progettazione la distingueremo in due fasi (lassi di tempo contigui e continui):
+
+\begin{itemize}
+
+	\item una di \textbf{alto livello} in cui fissiamo l'architettura e i pattern;
+	\item una di \textbf{dettaglio} in cui riempiamo i buchi per agevolare il lavoro del programmatore. Progettare parti piccole che chiameremo \textbf{moduli}.
+
+\end{itemize}
+
+Al progettista chiediamo di garantire che la sua attività sia funzionale. Un \textbf{modulo} è un'unità di lavoro che è utile ed opportuno affidare ad un singolo programmatore. Una classe troppo grossa non va bene, sbilancia il lavoro. Voglio un insieme di caratteristiche che stiano bene insieme. Finchè non ho ridotto le classi a modulo non posso partire con la programmazione. Se ho classi molto modulari posso far lavorare più programmatori in parallelo.\\\\
+
+Per descrivere l'architettura serve un \textbf{documento}, per produrre questo possiamo riferirci a degli standard procedurali, i quali sono però troppo rigidi. Si è capito che non è utile imporre procedure. Non è formativo imporre strutture di documenti, ma produrre processi. A noi interessa chiederci che cosa dobbiamo raccontare rispetto alle attese del committente. I documenti non devono avere una struttura standard.\\\\
+
+\textbf{Stati di processo} per SEMAT:
+
+\begin{itemize}
+
+	\item \textbf{Architecture selected}, dobbiamo scegliere l'architettura e dobbiamo spiegare perché essa è adatta al sistema. Selezione delle tecnologie necessarie, posso quindi fare stime di costo sensate. Decisione su \textbf{buy}, \textbf{build}, \textbf{make}. In questo stadio di avanzamento non c'è nemmeno una linea di codice, niente di realizzato;
+	\item \textbf{Demonstrable}, dimostrazione delle principalei caratteristiche del sistema agli stakeholder, i quali concordano. Decisioni su interfacce e configurazioni di sistema. Ho fatto e ho completato la progettazione ad alto livello ed eventualmente ho deei prototipi, ma non ho ancora implementato nulla;
+	\item \textbf{Usable}, il sistema è usabile e ha le caratteristiche desiderate. Non è completamente finito, ho ancora difetti, ma essi sono accettabili. Quindi possiamo \textit{sperare} di iniziare a fare la revisione di collaudo;
+	\item \textbf{Ready}, il prodotto è così maturo che posso iniziare a scrivere il \textit{manuale utente}. Si è infatti professionali se si fornisce all'utente un manuale con una struttura. E in quest'epoca non sono più solo documenti cartacei, ma anche e soprattutto con altri mezzi.
+
+\end{itemize}
+
+``La documentazione è l'incubo dei cowboy''. La documentazione deve essere una conseguenza dei processi organizzativi. Le attività che svolgo devono produrre tutto o quasi tutto. Serve documentare nel modo meno intrusivo possibile. Fra le cose più importanti che fa la documentazione è fornire una misura sull'avanzamento del progetto (Piano di progetto), che fornisce dei \textbf{consuntivi} (stato fotografato) e \textbf{preventivi} (stime). I consuntivi sono finali se siamo alla fine del progetto, o parziali se siamo in corso. E' bene misurare solo le cose utili e interessanti. Misureremo le cose sulle quali possiamo e vogliamo fissare degli obiettivi di miglioramento. Vorrei misurare per esempio quante volte modifico i requisiti. Misurazione per obiettivi. Il responsabile di progetto deve avere un ``\textit{cruscotto}'' con gli indicatori delle metriche che utilizziamo, e questi indicatori devono essere aggiornati. Vogliamo inoltre che il responsabile spenda il meno possibile. Voglio documentare tutte le attività di pianificazione, gestione, sviluppo, verifica e validazione. In poche parole dobbiamo documentare \textbf{tutto}. Il piano ci dà degli obiettivi sui tempi e costi, le norme sono invece gli strumenti e le procedure che uso per rendere il piano fattibile. Il primo e più importante documento da realizzare (interno) sono le \textbf{norme di progetto}, che cresceranno nel tempo. Una volta che ho le norme posso pensare al piano. Questi non sono documenti di progettazione, analisi o verifica.\\
+Ogni architettura sw ha molte viste:
+
+\begin{itemize}
+
+	\item \textbf{Modello statico}, inteso come componenti, ``quali sono le cose'', come si relazionano;
+	\item \textbf{Modello dinamico}, come le parti interagiscono tra di loro;
+	\item \textbf{Modello delle interfacce};
+	\item \textbf{Modello delle relazioni}, quali dati fluiscono tra i componenti;
+	\item \textbf{Modello di distribuzione}, associazione tra nodi fisici e componenti logiche.
+
+\end{itemize}
+
+L'architettura va descritta in due documenti distinti:
+
+\begin{itemize}
+
+	\item \textbf{Specifica tecnica};
+	\item \textbf{Definizione di prodotto}, ho bisogno di una \textit{milestone} che dica che questa è una buona architettura.
+
+\end{itemize}
+
+Architettura della documentazione:
+
+\begin{center}
+\includegraphics[width=0.75\columnwidth]{img3} % Example image
+\end{center}
+
+
+\end{document}
