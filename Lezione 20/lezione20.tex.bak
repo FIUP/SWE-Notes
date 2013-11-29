@@ -143,6 +143,12 @@ Nella Revisione di Progettazione devo avere due cose:
 
 \end{itemize}
 
-Devo portare un documento che si chiama \textbf{specifica tecnica} e l'avanzamento incrementale di PQ e del PP in cui avremo un pezzo di consuntivo. Porto la \textbf{Definizione di prodotto}
+Devo portare un documento che si chiama \textbf{specifica tecnica} e l'avanzamento incrementale di PQ e del PP in cui avremo un pezzo di consuntivo. Porto la \textbf{Definizione di prodotto}, dalla quale il programmatore inizierà il suo lavoro. Devo informare il cliente sulle caratteristiche del prodotto realizzato.\\
+In RQ è finita la codifica oppure mancano pezzi non essenziali. Approvazione dell'esito finale della fase di verifica. Dovrò aggiornare la PQ e il PP e presentare una bozza del manuale utente.\\
+Nella RA porto il prodotto finale \textbf{ultimato}. Adempimento del fornitore:
+
+\begin{center}
+\includegraphics[width=0.75\columnwidth]{img5} % Example image
+\end{center}
 
 \end{document}
