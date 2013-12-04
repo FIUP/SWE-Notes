@@ -21,7 +21,7 @@
 \usepackage{lastpage} % Required to determine the last page for the footer
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{graphicx} % Required to insert images
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 
 % Margins
 \topmargin=-0.45in
