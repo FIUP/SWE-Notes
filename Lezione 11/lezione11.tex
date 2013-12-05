@@ -1,0 +1,60 @@
+\input{../Templates/layout}
+\input{../Templates/commands}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\lessonAuthor{Luca De Franceschi}} % Top left header
+\chead{\lessonAuthor{Tullio Vardanega}\ \lessonTime{9:30}: \lessonNumber{11}} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\lessonNumber{11}}\\
+\normalsize\vspace{0.1in}\small{\lessonDate{Giovedì}{31}{Ottobre}{2013}}\\
+\vspace{0.1in}\large{\textit{\lessonTeacher{Tullio Vardanega},\ \lessonTime{09:30-11:15}}}
+\vspace{3in}
+}
+}
+
+\author{\textbf{\lessonAuthor{Luca De Franceschi}}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+\newpage
+\newpage
+
+\textbf{Requisiti}, trattare i requisiti e coinvolgere gli stakeholder è fondamentale. La seconda cosa più importante è progettare bene. La verifica è l'attenzione posta sistematicamente per assicurarsi che le attività svolte nel progetto non abbiano introdotto errori (es. di conformità). Si lavora sempre secondo regole di procedura. Devono esistere delle regole prima di iniziare il lavoro. Avremo alla fine specializzato un prodotto che soddisfa i requisiti iniziali e le sue aspettative. Un lavoro \textbf{verificato} è un lavoro fatto nel modo giusto e secondo le regole date. L'AR è essenziale per la validazione. Devo capire cos'è il prodotto che faccio. Per prodotto userò il termine \textbf{sistema}, dove il sw è una sua parte (non importa se piccola, media o insignificante). Molti dei sistemi al giorno d'oggi sono detti \textbf{socio-tecnici}, hanno come dato rilevante l'elemento \textbf{umano}, che è come la persona userà quel prodotto. Chiedersi che ruolo ha l'utente umano nel sistema è parte fondamentale dell'AR. In ogni sistema organizzato c'è uno \textbf{sportello} rivolto all'umano; molto spesso si chiama \textbf{front office} (interfaccia utente). L'opposizione è il \textbf{back office} in cui si prepara ciò che andrà al front office (es. database). Devo capire entrambe queste parti per realizzare un sistema socio-tecnico. E' molto raro progettare un sistema esclusivamente tecnico. Un sistema spesso non produce cose attese (all'inizio soprattutto). L'operatore umano ha una certa capacità di comprensione. La migliore informatica possibile è quella \textbf{invisibile} in cui non dobbiamo fare operazioni \textit{ad-hoc}. Togliamo l'atto che non è naturale per fare l'azione che facciamo normalmente. Togliere le procedure forzate innaturali. Dobbiamo capire l'intendimento, metterci nei panni dell'utente nel modo meno intrusivo possibile. Questo sforzo non è tipicamente di chi fa sw, ma bisogna invece imparare a mettersi nei panni dell'utente. E' una cosa così difficile che l'AR è stata rinominata in \textbf{Ingegneria dei requisiti}. Bisogna mettere in mostra questa competenza. Ci sono due fasi:
+
+\begin{itemize}
+
+	\item \textbf{Analisi}, inizialmente;
+	\item \textbf{Validazione}, alla fine.
+
+\end{itemize}
+
+All'inizio dobbiamo essere sicuri che abbiamo capito bene le aspettative degli stakeholder. Fra tutte le attività di \textit{swe} quella dei requisiti è la più documentale. Dobbiamo supportare l'intuizione, lo studio e raccontare il problema sotto i punti di vista necessari. I requisiti sono molto instabili e cambiano molto frequentemente. E' un processo che va in avanti dai requisiti al prodotto e all'indietro dal prodotto alla manutenzione. I \textbf{casi d'uso} servono a metterci nei panni di attori che agiscono sul sistema. Un attore è qualunque cosa che abbia capacità e diritto di agire sul sistema. Questo serve a capire le aspettative, cosa l'attore può fare sul sistema. E' una struttura ricorsiva. Il caso d'uso identifica le cose da fare da un punto di vista esterno, nell'ottica dell'attore. Bisogna identificare le parti che sono comprese in ciascuna funzionalità (\textbf{inclusione}). L'\textbf{estensione} è il fatto che nello svolgere un'attività alcune azioni dell'utente possono portarmi \textit{altrove}. Identificare le funzionalità essendo sicuri di avere catturato tutte quelle significative per l'attore. L'attore scatena certe funzionalità, ma queste possono essere attori verso altre funzionalità (\textit{back office}). Sui requisiti c'è un'attività legata a requisiti funzionali ma anche legati a norme e principi che sono il "\textit{come facciamo}". L'obiettivo è arrivare a consentire a chi dovrà occuparsi di progettazione di progettare il problema nel \textbf{modo giusto}. L'analista non progetta e il progettista non analizza i requisiti. Questo confine va imposto e rispettato. La funzionalità è un pezzo di un sistema, quindi un sottosistema. I requisiti vengono assegnati a sottosistemi.\\
+Il committente ha già detto cosa vuole in un linguaggio suo personale. Dice "\textit{io voglio questo}". A noi che siamo fornitori sta il compito di trasformare questo in requisiti formali. Dobbiamo produrre un documento di analisi dei requisiti che sia completamente \textbf{tracciabile al capitolato}. Traduzione in un documento interno. Assume valore e valenza fondamentale. Da quel momento in poi non guarderemo più al capitolato ma a questo documento. Scrivere un documento del genere è molto complicato e richiede uno sforzo notevole. Bisogna fare uno studio preliminare che si chiama \textbf{studio di fattibilità}, rispetto a interesse strategico, rischi e opportunità. Bisogna tirare fuori il miglior compromesso possibile tra queste tre cose. \textbf{Tecniche di analisi}:
+
+\begin{itemize}
+
+	\item \textbf{Studio del dominio}, "\textit{ci mettiamo nelle scarpe dei proponenti}", qualche volta è legato alle tecnologie, norme e regole che devo capire e che molto spesso non sono scritte. Capire i bisogni espressi e inespressi.
+	\item \textbf{Interazione con il cliente}, ovvero chi paga o ha promosso la commessa, che può essere un utente oppure no;
+	\item \textbf{Riflessioni fra più persone nel gruppo di progetto}, \textit{brainstorming}, attività collaborativa di gruppo. Ci deve essere un "\textit{pastore}", ovvero un facilitatore, una persona incaricata di non far divergere la discussione, garantendo che tutti partecipino.
+	\item \textbf{Prototipazione}, quando devo decidere se una cose è fattibile oppure no, devo capire se è "\textit{usa e getta}" o è incrementale. Devo stare molto attento su cosa prototipare e perchè farlo.
+
+\end{itemize}
+
+\end{document}
