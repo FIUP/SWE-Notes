@@ -1,159 +1,17 @@
-%%%%%%%%%%%%%%%%%%%%%
-% Structured General Purpose Assignment
-% LaTeX Template
-%
-% This template has been downloaded from:
-% http://www.latextemplates.com
-%
-% Original author:
-% Ted Pavlic (http://www.tedpavlic.com)
-%
-% Note:
-% The \lipsum[#] commands throughout this template generate dummy text
-% to fill the template out. These commands should all be removed when 
-% writing assignment content.
-%
-%%%%%%%%%%%%%%%%%%%%%
+\section{Lezione 15}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+Trovare regole di comportamento e strumenti che abbbiano come obiettivo il \textbf{controllo della qualità}. Regole non nostre ma di qualcun altro che abbia una buona rappresentatività. Esempio: i \textit{tickets} danno un accurato strumento di controllo dell'avanzamento che fa parte della gestione della qualità. Regole e strumenti che evolvano nel tempo. Non ci interessa la norma in quanto norma ma ci interessa una norma che ci aiuti ad essere sistematici, disciplinati e quantificabili. Non ci interessa la burocrazia, ma strumenti che ci aiutino a fare bene il nostro lavoro e ad avere un approccio più strutturato. L'attenzione alla qualità deve spostarsi dal prodotto al \textbf{sistema} e alla sua organizzazione. La qualità di prodotto è meno importante della qualità di sistema. Il sistema è un insieme di attività organizzate e coese: \textbf{organizzazione a processi}. Un processo è un insieme di attività regolate che hanno una ragione. Questa tendenza è diventata parte del mondo professionale. Non possiamo dire ``facccio una cosa perchè l'ho sempre fatta così''. 
 
-\documentclass{article}
+Nel caso di \textbf{Deming} (rivedere ciclo di Deming) pianifico attività che producono miglioramenti. Tutti i processi hanno come prima attività l'istanziazione del processo e poi la pianificazione. Per poter migliorare devo prima essere misurato, devo \textbf{controllare} il miglioramento ottenuto. Devo fare una verifica di \textbf{quanto sono migliorato}. Esempio contare gli errori di formattazione in un documento e fissare un obiettivo di miglioramento. Il ciclo di Deming aggiunge ispezione intelligente che ci aiuta ad avere più qualità misurabile. Le procedure di qualità sono una serie di passi che dimostrano conformità alle regole in modo misurabile. Pianificare come fare a raggiungere miglioramenti nella qualità. Lo standard di qualità protegge prevalentemente l'utilizzatore. Tutto si rivolge al modo in cui facciamo e in cui valutiamo il lavoro fatto. \textbf{Modello di qualità}, rappresentazione astratta, insieme di strumenti che servono a valutare la qualità. \textbf{Modello di Bohem}, la qualità viene descritta da un insieme di caratteristiche fissate e non arbitrarie. Bohem ne ha definite 7 e le ha suddivise in ulteriori 15 sottocategorie.
 
-\usepackage{fancyhdr} % Required for custom headers
-\usepackage{lastpage} % Required to determine the last page for the footer
-\usepackage{extramarks} % Required for headers and footers
-\usepackage{graphicx} % Required to insert images
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
-% unicode sistema gli accenti
-%\usepackage{ucs}
-\usepackage[latin1]{inputenc}
-
-% Margins
-\topmargin=-0.45in
-\evensidemargin=0in
-\oddsidemargin=0in
-\textwidth=6.5in
-\textheight=9.0in
-\headsep=0.25in 
-
-\linespread{1.1} % Line spacing
-
-% Set up the header and footer
-\pagestyle{fancy}
-\lhead{\hmwkAuthorName} % Top left header
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
-
-\setlength\parindent{0pt} % Removes all indentation from paragraphs
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT STRUCTURE COMMANDS
-%	Skip this unless you know what you're doing
-%----------------------------------------------------------------------------------------
-
-% Header and footer for when a page split occurs within a problem environment
-\newcommand{\enterProblemHeader}[1]{
-\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-}
-
-% Header and footer for when a page split occurs between problem environments
-\newcommand{\exitProblemHeader}[1]{
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1}{}\nobreak
-}
-
-\setcounter{secnumdepth}{0} % Removes default section numbers
-\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
-
-\newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
-\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
-\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
-\section{\homeworkProblemName} % Make a section in the document with the custom problem count
-\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
-}{
-\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-
-\newcommand{\definizione}[1]{ % Defines the problem answer command with the content as the only argument
-\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
-}
-
-\newcommand{\homeworkSectionName}{}
-\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
-\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
-\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
-\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
-}{
-\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-   
-%----------------------------------------------------------------------------------------
-%	NAME AND CLASS SECTION
-%----------------------------------------------------------------------------------------
-
-\newcommand{\hmwkTitle}{Lezione \#15} % Assignment title
-\newcommand{\hmwkDueDate}{Wednesday,\ November\ 13,\ 2013} % Due date
-\newcommand{\hmwkClass}{Ingegneria del Software} % Course/class
-\newcommand{\hmwkClassTime}{11:30am} % Class/lecture time
-\newcommand{\hmwkClassInstructor}{Tullio Vardanega} % Teacher/lecturer
-\newcommand{\hmwkAuthorName}{Luca De Franceschi} % Your name
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
-\vspace{3in}
-}
-
-\author{\textbf{\hmwkAuthorName}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle
-
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
-%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
-
-\newpage
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	PROBLEM 1
-%----------------------------------------------------------------------------------------
-% To have just one problem per page, simply put a \clearpage after each problem
-
-
-
-Trovare regole di comportamento e strumenti che abbbiano come obiettivo il \textbf{controllo della qualità}. Regole non nostre ma di qualcun altro che abbia una buona rappresentatività. Esempio i \textit{tickets} danno un accurato strumento di controllo dell'avanzamento che fa parte della gestione della qualità. Regole e strumenti che evolvano nel tempo. Non ci interessa la norma in quanto norma ma ci interessa una norma che ci aiuti ad essere sistematici, disciplinati e quantificabili. Non ci interessa la burocrazia, ma strumenti che ci aiutino a fare bene il nostro lavoro e ad avere un approccio più strutturato. L'attenzione alla qualità deve spostarsi dal prodotto al \textbf{sistema} e alla sua organizzazione. La qualità di prodotto è meno importante della qualità di sistema. Il sistema è un insieme di attività organizzate e coese -> \textbf{organizzazione a processsi}. Un processo è un insieme di attività regolate ce hanno una ragione. Questa tendenza è diventata parte del mondo professionale. Non possiamo dire ``facccio una cosa perchè l'ho sempre fatta così''. Nel caso di \textbf{Deming} (rivedere ciclo di Deming) pianifico attività che producono miglioramenti. Tutti i processi hanno come prima attività l'istanziazione del processo e poi la pianificazione. Per poter migliorare devo prima essere misurato, devo \textbf{controllare} il miglioramento ottenuto. Devo fare una verifica di \textbf{quanto sono migliorato}. Esempio contare gli errori di formattazione in un documento e fissare un obiettivo di miglioramento. Il ciclo di Deming aggiunge ispezione intelligente che ci aiuta ad avere più qualità misurabile. Le procedure di qualità sono una serie di passi che dimostrano conformità alle regole in modo misurabile. Pianificare come fare a raggiungere miglioramenti nella qualità. Lo standard di qualità protegge prevalentemente l'utilizzatore. Tutto si rivolge al modo in cui facciamo e in cui valutiamo il lavoro fatto. \textbf{Modello di qualità}, rappresentazione astratta, insieme di strumenti che sercono a valutare la qualità. \textbf{Modello di Bohem}, a qualità viene descritta da un insieme di caratteristiche fissate e non arbitrarie. Bohem ne ha definite 7 e le ha suddivise in ulteriori 15 sottocategorie.\\
-Per dire come si fa a valutare una caratteristica devo servirmi di una \textbf{metrica}. La metrica è il sistema di interpretazione delle misure e la loro valutazione. Per la qualità ho bisogno della metrica per avere un sistema di valutazione. Secondo ISO/IEC 9126:2001 ho i seguenti principi:
+Per dire come si fa a valutare una caratteristica devo servirmi di una \textbf{metrica}. La metrica è il sistema di interpretazione delle misure e la loro valutazione. Per la qualità ho bisogno della metrica per avere un sistema di valutazione. Secondo \textit{ISO/IEC 9126:2001} ho i seguenti principi:
 
 \begin{enumerate}
 
-	\item \textbf{Funzionalità}, avere le funzionalità attive è qualità;
+	\item \textbf{Funzionalità}: avere le funzionalità attive è qualità;
 	\item \textbf{Affidabilità};
-	\item \textbf{Efficienza}, devo metterci poco tempo, quante risorse uso per fare una determinata cosa;
-	\item \textbf{Usabilità}, non vanno bene cose troppo complesse per gli utilizzatori;
+	\item \textbf{Efficienza}: devo metterci poco tempo, quante risorse uso per fare una determinata cosa;
+	\item \textbf{Usabilità}: non vanno bene cose troppo complesse per gli utilizzatori;
 	\item \textbf{Mantenibilità};
 	\item \textbf{Portabilità}.
 
@@ -164,18 +22,20 @@ La \textbf{qualità in uso} è una dimensione specifica rivolta esclusivamente all
 \begin{itemize}
 
 	\item \textbf{Efficace};
-	\item \textbf{Produttività}, lo strumento mi fa andare più veloce;
-	\item \textbf{Soddisfazione}, ``usarlo non mi dà tristezza'';
+	\item \textbf{Produttività}: lo strumento mi fa andare più veloce;
+	\item \textbf{Soddisfazione}: ``usarlo non mi dà tristezza'';
 	\item \textbf{Portabilità}.
 	
 \end{itemize}
 
-Una misura valutabile su sw è la sua lunghezza, \textbf{statements}, numero di istruzioni intese come istruzioni macchina. Ma sappiamo misurare anche l'impegno a progetto, che si misura in giorno/persona, quanto vale in ore un giorno relativo agli orari di ciascuno. Indice di annebbiamento od offuscamento di un test, strumento che analizza la frase e dice se è comprensibile o meno. Questa  verifica viene fatta in automatico. Alcune caratteristiche del sw non sono immediatamente misurabili, ma dipendono da caratteristiche sottostanti.\\
-E' importantissimo darsi misure e per farlo ci servono metriche che aderiscano a degli standard. Poichè voglio che le misure siano automatizzate cerherò degli strumenti di lavoro che quelle metriche importino.\\\\
+Una misura valutabile sul software è la sua lunghezza, \textbf{statements}, numero di istruzioni intese come istruzioni macchina. Ma sappiamo misurare anche l'impegno a progetto, che si misura in giorno/persona, quanto vale in ore un giorno relativo agli orari di ciascuno. Indice di annebbiamento od offuscamento di un test, strumento che analizza la frase e dice se è comprensibile o meno. Questa  verifica viene fatta in automatico. Alcune caratteristiche del sw non sono immediatamente misurabili, ma dipendono da caratteristiche sottostanti.
 
-\textbf{Qualità di processo}\\\\
+È importantissimo darsi misure e per farlo ci servono metriche che aderiscano a degli standard. Poichè voglio che le misure siano automatizzate cerherò degli strumenti di lavoro che importino quelle metriche.
 
-\textit{''Dai tubi sporchi non esce acqua pulita''}\\
+\textbf{Qualità di processo}
+
+\textit{''Dai tubi sporchi non esce acqua pulita''}.
+
 Voglio tecniche produttive. Quanto più sono produttivo tanto meno sarò reattivo. La \textbf{quality assurance} è fatta da regole, procedure e strumenti. La verifica la faccio a valle di un lavoro svolto che mi è già costato. Al tempo 0 ho costo 0. Voglio imparare ad essere massimamente proattivo per risparmiare risorse e fare meno fatica. E gli assi di risparmio sono assi molto importanti e rilevanti. L'intelligenza del processo sta nella sua capacità di migliorarsi, e per migliorarsi ci si valuta, cioè ci si misura rispetto a obiettivi.
 
 \begin{center}
@@ -188,8 +48,6 @@ Dobbiamo crearci regole per il miglioramento e per farlo dobbiamo fare il lavoro
 \includegraphics[width=0.75\columnwidth]{img2.png} % Example image
 \end{center}
 
+Politica di qualità da fissare, una volta fissata posso fare un \textbf{manuale della qualità} da cui deriva un \textbf{piano di qualità} specifico del progetto. Le attuazioni operative del piano di qualità includono alcune operazioni molto semplici.
 
-Politica di qualità da fissare, una volta fissata posso fare un \textbf{manuale della qualità} da cui deriva un \textbf{piano di qualità} specifico del progetto. Le attuazioni operative del piano di qualità includono alcune operazioni molto semplici.\\\\
-\textbf{CMM}, strumento che serve per valutare come lavoriamo (\textit{Capability Maturity Model}).
-
-\end{document}
+\textbf{CMM}: strumento che serve per valutare come lavoriamo (\textit{Capability Maturity Model}).

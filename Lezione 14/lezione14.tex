@@ -1,149 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%
-% Structured General Purpose Assignment
-% LaTeX Template
-%
-% This template has been downloaded from:
-% http://www.latextemplates.com
-%
-% Original author:
-% Ted Pavlic (http://www.tedpavlic.com)
-%
-% Note:
-% The \lipsum[#] commands throughout this template generate dummy text
-% to fill the template out. These commands should all be removed when 
-% writing assignment content.
-%
-%%%%%%%%%%%%%%%%%%%%%
+\section{Lezione 14}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass{article}
-
-\usepackage{fancyhdr} % Required for custom headers
-\usepackage{lastpage} % Required to determine the last page for the footer
-\usepackage{extramarks} % Required for headers and footers
-\usepackage{graphicx} % Required to insert images
-\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-% unicode sistema gli accenti
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
-
-% Margins
-\topmargin=-0.45in
-\evensidemargin=0in
-\oddsidemargin=0in
-\textwidth=6.5in
-\textheight=9.0in
-\headsep=0.25in 
-
-\linespread{1.1} % Line spacing
-
-% Set up the header and footer
-\pagestyle{fancy}
-\lhead{\hmwkAuthorName} % Top left header
-\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
-
-\setlength\parindent{0pt} % Removes all indentation from paragraphs
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT STRUCTURE COMMANDS
-%	Skip this unless you know what you're doing
-%----------------------------------------------------------------------------------------
-
-% Header and footer for when a page split occurs within a problem environment
-\newcommand{\enterProblemHeader}[1]{
-\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-}
-
-% Header and footer for when a page split occurs between problem environments
-\newcommand{\exitProblemHeader}[1]{
-\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
-\nobreak\extramarks{#1}{}\nobreak
-}
-
-\setcounter{secnumdepth}{0} % Removes default section numbers
-\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
-
-\newcommand{\homeworkProblemName}{}
-\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
-\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
-\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
-\section{\homeworkProblemName} % Make a section in the document with the custom problem count
-\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
-}{
-\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-
-\newcommand{\definizione}[1]{ % Defines the problem answer command with the content as the only argument
-\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
-}
-
-\newcommand{\homeworkSectionName}{}
-\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
-\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
-\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
-\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
-}{
-\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
-}
-   
-%----------------------------------------------------------------------------------------
-%	NAME AND CLASS SECTION
-%----------------------------------------------------------------------------------------
-
-\newcommand{\hmwkTitle}{Lezione \#14} % Assignment title
-\newcommand{\hmwkDueDate}{Tuesday,\ November\ 12,\ 2013} % Due date
-\newcommand{\hmwkClass}{Ingegneria del Software} % Course/class
-\newcommand{\hmwkClassTime}{9:30am} % Class/lecture time
-\newcommand{\hmwkClassInstructor}{Tullio Vardanega} % Teacher/lecturer
-\newcommand{\hmwkAuthorName}{Luca De Franceschi} % Your name
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
-\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
-\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
-\vspace{3in}
-}
-
-\author{\textbf{\hmwkAuthorName}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle
-
-%----------------------------------------------------------------------------------------
-%	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------
-
-%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
-
-\newpage
-\newpage
-
-%----------------------------------------------------------------------------------------
-%	PROBLEM 1
-%----------------------------------------------------------------------------------------
-
-% To have just one problem per page, simply put a \clearpage after each problem
-
-E' necessario fare un lavoro profondo sui requisiti, è un attività ingegneristica. Da essa dipende una parte cospicua del successo del progetto. Anzitutto si sminuzza la complessità in parti più piccole, quindi dobbiamo classificarli, attribuirli delle etichette per manipolarli.
+È necessario fare un lavoro profondo sui requisiti, è un attività ingegneristica. Da essa dipende una parte cospicua del successo del progetto. Anzitutto si sminuzza la complessità in parti più piccole, quindi dobbiamo classificarli, attribuirli delle etichette per manipolarli.
 
 \begin{itemize}
 
@@ -156,9 +13,9 @@ Dobbiamo avere un grado ancora più fine, distinguere tra \textbf{funzionalità}
 
 \begin{itemize}
 
-	\item \textbf{Sistema}, ciò che dobbiamo realizzare, l'organizzazione di cui facciamo parte;
-	\item \textbf{processo}, il modo in cui lavoriamo, insieme di attività coese e coordinate;
-	\item \textbf{progetto}, una commessa commerciale con certi vincoli.
+	\item \textbf{Sistema}: ciò che dobbiamo realizzare, l'organizzazione di cui facciamo parte;
+	\item \textbf{Processo}: il modo in cui lavoriamo, insieme di attività coese e coordinate;
+	\item \textbf{Progetto}: una commessa commerciale con certi vincoli.
 
 \end{itemize}
 
@@ -166,85 +23,93 @@ I processi o ce li infliggiamo da soli o vengono espressamente richiesti, così 
 
 \begin{itemize}
 
-	\item \textbf{Requisiti funzionali}, cosa devo fare;
-	\item \textbf{Attributo}, performance e quality;
-	\item \textbf{Vincoli}, legati alla natura del sistema, alle cose che deve fare e all'ambiente. 
+	\item \textbf{Requisiti funzionali}: cosa devo fare;
+	\item \textbf{Attributo}: performance e quality;
+	\item \textbf{Vincoli}: legati alla natura del sistema, alle cose che deve fare e all'ambiente. 
 
 \end{itemize}
 
-Le \textbf{prestazioni} si misurano rispetto al tempo di esecuzione, alla velocità con cui effettuo le cose, l'ampiezza di dati che posso gestire e il \textit{throughput}, ovvero quante cose posso gestire simultaneamente.\\ \\
-\textbf{Usabilità} significa che il sistema si presta alle mie abilità ed è facile da usare.\\
-\textbf{Sicurezza} significa che vanno garantiti alcuni vincoli sui dati e la loro accessibilità.\\
-\textbf{Availability} significa che il sistema è sempre disponibile 24h/24 e deve sempre funzionare.\\
-\textbf{Portabilità}, se sviluppo un sistema per un certo protocollo voglio poterlo riusare per protocolli differenti.\\
-\textbf{Mantenibilità}, quando rilascio un sistema ad un utente devo garantire di poter correggere i difetti e aggiungere ulteriori funzionalità in futuro.\\
-Alcune applicazioni sono legate e \textbf{vincoli ambientali}.\\
-Serve frantumare i requisiti, perchè ogni sottosistema ha bisogno di un trattamento specifico, risolvibile in tempo e costi accettabili. L'analista deve poter pensare a requisiti così atomicizzati da poter essere \textbf{facilmente verificabili}. Il modo più semplice è scrivere requisiti \textbf{elementari}.\\
-Verificare i requisiti ha un costo che devo mettere nel budget di progetto. Devo avere rapidamente un'idea di cosa mi costerà fare una determinata verifica. Posso verificare tramite \textbf{tests} che però andranno solo a scoprire ciò che \textit{non va bene}: questo non basta. Sulle prestazioni invece devo spesso effettuare \textbf{misurazioni}. I requisiti di qualità non posso farli in modo automatico, possono quindi avere un costo importante. Idealmente vorremmo tecniche di verifica che dimostrino la qualità e che abbiano un basso costo. I requisiti che solitamente vengono dati sono requisiti \textbf{macroscopici}. Una volta scalpellati mi devo mettere in una situazione minima di sopravvivenza. Ci sono tre tipologie fondamentali:
+Le \textbf{prestazioni} si misurano rispetto al tempo di esecuzione, alla velocità con cui effettuo le cose, l'ampiezza di dati che posso gestire e il \textit{throughput}, ovvero quante cose posso gestire simultaneamente.
+
 \begin{itemize}
 
-	\item \textbf{Obbligatori}, senza non c'è un sistema;
-	\item \textbf{Desiderabili}, ``sarebbe bello fare così'';
-	\item \textbf{Opzionali}, ``se lo vuoi lo paghi''.
+\item \textbf{Usabilità}: significa che il sistema si presta alle mie abilità ed è facile da usare;
+
+\item \textbf{Sicurezza}: significa che vanno garantiti alcuni vincoli sui dati e la loro accessibilità;
+
+\item \textbf{Availability}: significa che il sistema è sempre disponibile 24h/24 e deve sempre funzionare;
+
+\item \textbf{Portabilità}: se sviluppo un sistema per un certo protocollo voglio poterlo riusare per protocolli differenti;
+
+\item \textbf{Mantenibilità}: quando rilascio un sistema ad un utente devo garantire di poter correggere i difetti e aggiungere ulteriori funzionalità in futuro.
 
 \end{itemize}
 
-L'interesse di un fornitore è \textbf{negoziare} questi requisiti. A noi sta il compito di classificare in modo elastico, perchè il fornitore non può fare tutto ma dovrà dire ``io posso fare questo''. In una gara d'appalto vince chi offre allo stesso prezzo il progetto migliore. I requisiti non devono essere in contraddizione tra loro, non devono essere mai in conflitto o sovrapposti. Per ogni passo di avanzamento del progetto voglio sapere sempre dove sono, cosa sto facendo e perchè. Tutto quello che faccio deve essere documentato in modo chiaro. I requisiti nascono scritti in un linguaggio naturale, sono testi narrativi, non sono formali. I capitolati sono scritti in un linguaggio informale e noi vogliamo portarci in un linguaggio che sia il più vicino possibile ad automi. Cercheremo tecniche che rendono il più possibile automatico ciò che facciamo (es. UML o tabelle).\\
+Alcune applicazioni sono legate e \textbf{vincoli ambientali}.
+
+Serve frantumare i requisiti, perchè ogni sottosistema ha bisogno di un trattamento specifico, risolvibile in tempo e costi accettabili. L'analista deve poter pensare a requisiti così atomicizzati da poter essere \textbf{facilmente verificabili}. Il modo più semplice è scrivere requisiti \textbf{elementari}.
+
+Verificare i requisiti ha un costo, che devo mettere nel budget di progetto. Devo avere rapidamente un'idea di cosa mi costerà fare una determinata verifica. Posso verificare tramite \textbf{tests} che però andranno solo a scoprire ciò che \textit{non va bene}: questo non basta. Sulle prestazioni invece devo spesso effettuare \textbf{misurazioni}. I requisiti di qualità non posso farli in modo automatico, possono quindi avere un costo importante. Idealmente vorremmo tecniche di verifica che dimostrino la qualità e che abbiano un basso costo. I requisiti che solitamente vengono dati sono requisiti \textbf{macroscopici}. Una volta scalpellati mi devo mettere in una situazione minima di sopravvivenza. Ci sono tre tipologie fondamentali:
+\begin{itemize}
+
+	\item \textbf{Obbligatori}: ``senza non c'è un sistema'';
+	\item \textbf{Desiderabili}: ``sarebbe bello fare così'';
+	\item \textbf{Opzionali}: ``se lo vuoi lo paghi''.
+
+\end{itemize}
+
+L'interesse di un fornitore è \textbf{negoziare} questi requisiti. A noi sta il compito di classificare in modo elastico, perchè il fornitore non può fare tutto ma dovrà dire ``io posso fare questo''. In una gara d'appalto vince chi offre allo stesso prezzo il progetto migliore. I requisiti non devono essere in contraddizione tra loro, non devono essere mai in conflitto o sovrapposti. Per ogni passo di avanzamento del progetto voglio sapere sempre dove sono, cosa sto facendo e perchè. Tutto quello che faccio deve essere documentato in modo chiaro. I requisiti nascono scritti in un linguaggio naturale, sono testi narrativi, non sono formali. I capitolati sono scritti in un linguaggio informale e noi vogliamo portarci in un linguaggio che sia il più vicino possibile ad automi. Cercheremo tecniche che rendono il più possibile automatico ciò che facciamo (es. UML o tabelle).
+
 \textbf{IEE 830-1998} è un documento che descrive le pratiche raccomandate per scrivere un'analisi dei requisiti. Ci sono 8 proprietà fondamentali:
 
 \begin{enumerate}
 
-	\item \textbf{Non ambigui}, mai alcuna incertezza su che cosa significano;
-	\item \textbf{Correct}, non deve nascere sbagliato perchè fa danni;
+	\item \textbf{Non ambigui}: mai alcuna incertezza su che cosa significano;
+	\item \textbf{Correct}: non deve nascere sbagliato perchè fa danni;
 	\item \textbf{Completi};
 	\item \textbf{Verificabili} a basso costo;
-	\item \textbf{Consistenti} non posso chiedere una cosa e il suo contrario;
-	\item \textbf{Modificabili}, serve una tecnica che renda modificabile l'insieme dei requisiti. Sui requisiti devo poter aggiungere, togliere, cercare, aggiornare: operazioni tipiche da basi di dati;
-	\item \textbf{Tracciabile}, deve essere univocamente identificabile;
+	\item \textbf{Consistenti}: non posso chiedere una cosa e il suo contrario;
+	\item \textbf{Modificabili}: serve una tecnica che renda modificabile l'insieme dei requisiti. Sui requisiti devo poter aggiungere, togliere, cercare, aggiornare: operazioni tipiche da basi di dati;
+	\item \textbf{Tracciabile}: deve essere univocamente identificabile;
 	\item \textbf{Ordinati} (ranked) per rilevanza.
 
 \end{enumerate}
 
-Non vado a scrivere un documento, ma lo produco a partire da una base di dati preesistente.\\\\
+Non vado a scrivere un documento, ma lo produco a partire da una base di dati preesistente.
 
-Un verificatore deve prendere un prodotto (documento) e trovare errori e difetti. Vogliamo un verificatore che sia il più possibile automatizzato. Tecnica di ricerca \textit{a pettine}, \textbf{walkthrough}, tecnica completamente manuale che costa un sacco di fatica, una ricerca a largo spettro; lo si fa quando non si sa esattamente cosa cercare. Oppure c'è la tecnica dell'\textbf{ispezione}, in cui c'è una lettura mirata e strutturata; questa tecnica è molto più automatizzabile. Facendo walkthrough impariamo e sviluppiamo tecniche per fare ispezione. Sui requisiti devo poter fare una buona identificazione e classificazione. Numerazione sequenziale, cpiie <categoria,numero>. Dentro un progetto tutto rimanda ai requisiti, tutto è sempre in una forma tracciabile e riconducibile al \textit{perchè è lì}. Tutto ciò deve essere fatto attraverso procedure e automatizzazioni.\\
-\textbf{SEMAT}, nella struttura c'è una progressione di stati molto utili da analizzare. I requisiti hanno un ciclo di vita proprio che passa attraverso 6 stati, ciascuno con delle dipendenze. Lo stato iniziale si chiama \textbf{conceived} (concepito), si vede un'opportunità nel fare le cose e i committenti sono identificati. \textbf{Bounded}, i requisiti sono su un recinto e potrò ragionare macroscopicamente di fattibilità. \textbf{Coherent}, quando i requisiti sono classificati e quelli chiari sono distinti.\\
-La risposta che darà il committente porterà nello stato \textbf{acceptable}, diventa un punto dal quale avanzare e dal quale non vorremmo mai retrocedere. \textbf{Addressed}, i requisiti sono collocati, ho delle soluzioni specifiche e il prodotto che sto facendo soddisfa i requisiti. Questo stato lo raggiungiamo prima del collaudo. Se il proponente dà l'ok transiamo nello stato \textbf{fullfilled} in cui ``le cose sono soddisfatte'', stato dell'accattazione. Le transizioni sono più vicine nel tempo nella parte iniziale.\\\\
+Un verificatore deve prendere un prodotto (documento) e trovare errori e difetti. Vogliamo un verificatore che sia il più possibile automatizzato. Tecnica di ricerca \textit{a pettine}, \textbf{walkthrough}, tecnica completamente manuale che costa un sacco di fatica, una ricerca a largo spettro; lo si fa quando non si sa esattamente cosa cercare. Oppure c'è la tecnica dell'\textbf{ispezione}, in cui c'è una lettura mirata e strutturata; questa tecnica è molto più automatizzabile. Facendo walkthrough impariamo e sviluppiamo tecniche per fare ispezione. Sui requisiti devo poter fare una buona identificazione e classificazione. Numerazione sequenziale, <categoria,numero>. Dentro un progetto tutto rimanda ai requisiti, tutto è sempre in una forma tracciabile e riconducibile al \textit{perchè è lì}. Tutto ciò deve essere fatto attraverso procedure e automatizzazioni.
 
-\underline{\textbf{Qualità del software}}\\\\
+\textbf{SEMAT}: nella struttura c'è una progressione di stati molto utili da analizzare. I requisiti hanno un ciclo di vita proprio che passa attraverso 6 stati, ciascuno con delle dipendenze. Lo stato iniziale si chiama \textbf{conceived} (concepito), si vede un'opportunità nel fare le cose e i committenti sono identificati. \textbf{Bounded}, i requisiti sono su un recinto e potrò ragionare macroscopicamente di fattibilità. \textbf{Coherent}, quando i requisiti sono classificati e quelli chiari sono distinti.
 
-L'intuizione importante è che c'è qualità se c'è un'aspettativa valutabile, deve essere una caratteristica sulla quale si può fare una valutazione obiettiva. Qualità come concetto oggettivo. Se il prodotto ha qualità avrà più mercato e avrà meno costo in fase di manutenzione.\\
+La risposta che darà il committente porterà nello stato \textbf{acceptable}, diventa un punto dal quale avanzare e dal quale non vorremmo mai retrocedere. \textbf{Addressed}, i requisiti sono collocati, ho delle soluzioni specifiche e il prodotto che sto facendo soddisfa i requisiti. Questo stato lo raggiungiamo prima del collaudo. Se il proponente dà l'ok transiamo nello stato \textbf{fullfilled} in cui ``le cose sono soddisfatte'', stato dell'accattazione. Le transizioni sono più vicine nel tempo nella parte iniziale.
 
-\definizione{
-Insieme delle caratteristiche di un'entità (prodotto, processo, servizio) che ne determinano la capacità di soddisfare esigenze espresse e implicite.
-}
+\underline{\textbf{Qualità del software}}
 
-E' importante vedere che le esigenze possono essere \textbf{espresse} o \textbf{implicite}. Spesso la parte implicita è dominante e bisogna scoprirla. La qualità può essere guardata da 3 diversi punti di vista:
+L'intuizione importante è che c'è qualità se c'è un'aspettativa valutabile, deve essere una caratteristica sulla quale si può fare una valutazione obiettiva. Qualità come concetto oggettivo. Se il prodotto ha qualità avrà più mercato e avrà meno costo in fase di manutenzione.
+
+
+La qualità viene definita come l'insieme delle caratteristiche di un'entità (prodotto, processo, servizio) che ne determinano la capacità di soddisfare esigenze espresse e implicite.
+
+È importante vedere che le esigenze possono essere \textbf{espresse} o \textbf{implicite}. Spesso la parte implicita è dominante e bisogna scoprirla. La qualità può essere guardata da 3 diversi punti di vista:
 
 \begin{itemize}
 
-	\item \textbf{Visione relativa e comparativa}, ``io sono meglio del mio competitore'';
-	\item \textbf{Intrinseca}, hai qualità se soddisfi i bisogni, è chiaro che deve essere così, dimensione ovvia e non comparativa;
-	\item \textbf{Quantitativa}, anche se non ho competitività oggi, un domani potrò confrontarm. Mi dà una posizione definitiva (es. stelle degli hotel) anche senza competizione.
+	\item \textbf{Visione relativa e comparativa}: ``io sono meglio del mio competitore'';
+	\item \textbf{Intrinseca}: hai qualità se soddisfi i bisogni, è chiaro che deve essere così, dimensione ovvia e non comparativa;
+	\item \textbf{Quantitativa}: anche se non ho competitività oggi, un domani potrò confrontarmi. Mi dà una posizione definitiva (es. stelle degli hotel) anche senza competizione.
 
 \end{itemize} 
 
-La qualità viene erogata con un processo che si chiama \textbf{gestione di qualità}.\\
+La qualità viene erogata con un processo che si chiama \textbf{gestione di qualità}, che viene definita come la struttura organizzativa, le responsabilità, le procedure, i procedimenti e le risorse messe in atto per il perseguimento della qualità.
 
-\definizione{
-La struttura organizzativa, le responsabilità, le procedure, i procedimenti e le risorse messe in atto per il perseguimento della qualità.
-}
-
-Chi lavora nei principi del SWE dovrebbe essere conforme a queste caratteristiche. Ambito del sistema di qualità.
+Chi lavora nei principi dell'ingegneria del software dovrebbe essere conforme a queste caratteristiche. Ambito del sistema di qualità.
 
 \begin{itemize}
 
-	\item \textbf{Pianificazione}, voglio che le attività siano sistematiche nel modo richiesto; la pianificazione è alla base di ogni sistema di qualità. Senza pianificazione è molto più facile fallire;
-	\item \textbf{Controllo}, ogni attività svolta può introdurre errori e devo cercare di intercettarli; un sistema di qualità ha bisogno di verifica;
+	\item \textbf{Pianificazione}: voglio che le attività siano sistematiche nel modo richiesto; la pianificazione è alla base di ogni sistema di qualità. Senza pianificazione è molto più facile fallire;
+	\item \textbf{Controllo}: ogni attività svolta può introdurre errori e devo cercare di intercettarli; un sistema di qualità ha bisogno di verifica;
 	\item \textbf{Miglioramento continuo}.
 
 \end{itemize}
 
-\textbf{Pianificazione di qualità}, è relativa a obiettivi specifici di qualità. Per raggiungere quegli obiettivi serve fare cose specifiche e aggiuntive, ma devo anche avere le risorse per poterlo fare. ``Cosa mi serve per fare meglio'', inteso come competenze e infrastrutture. Il \textbf{controllo} dev'essere intelligente, rapido, mirato e oggettivo. Devo avere chiaro quale attività svolgere. Cerco di farlo in modo incrementale. \textbf{Quality assurance}, un atto proattivo di garanzia, accertamento di qualità. Faccio azioni preventive che mi diano garanzie e rendano molto meno pesante il controllo.
-
-\end{document}
+\textbf{Pianificazione di qualità}: è relativa a obiettivi specifici di qualità. Per raggiungere quegli obiettivi serve fare cose specifiche e aggiuntive, ma devo anche avere le risorse per poterlo fare. ``Cosa mi serve per fare meglio'', inteso come competenze e infrastrutture. Il \textbf{controllo} dev'essere intelligente, rapido, mirato e oggettivo. Devo avere chiaro quale attività svolgere. Cerco di farlo in modo incrementale. \textbf{Quality assurance}, un atto proattivo di garanzia, accertamento di qualità. Faccio azioni preventive che mi diano garanzie e rendano molto meno pesante il controllo.

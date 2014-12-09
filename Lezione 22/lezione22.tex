@@ -1,56 +1,20 @@
-\input{../Templates/layout}
-\input{../Templates/commands}
-
-% Set up the header and footer
-\pagestyle{fancy}
-\lhead{\lessonAuthor{Luca De Franceschi}} % Top left header
-\chead{\lessonAuthor{Tullio Vardanega}\ \lessonTime{11:30}: \lessonNumber{22}} % Top center header
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\lessonNumber{22}}\\
-\normalsize\vspace{0.1in}\small{\lessonDate{Mercoledì}{27}{Novembre}{2013}}\\
-\vspace{0.1in}\large{\textit{\lessonTeacher{Tullio Vardanega},\ \lessonTime{09:30-11:15}}}
-\vspace{3in}
-}
-}
-
-\author{\textbf{\lessonAuthor{Luca De Franceschi}}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle
-\newpage
-\newpage
+\section{Lezione 22}
 
 Un problema grosso nella produzione del codice è che non siamo in generale preparati ad avere una buona strategia di \textbf{gestione degli errori}:
 
 \begin{itemize}
 
-	\item \textbf{Relativi al flusso di dati}, non posso assumere che l'utente inserisca sempre dati corretti, ma allo stesso tempo non posso accettare \textit{spazzatura}. Sugli input non posso fare assunzioni ottimistiche. Problematiche relative alla disponibilità di un dato.
-	\item \textbf{Relativo al flusso di controllo}, le azioni che avvengono, gestione di eccezioni che io sollevo o che il sistema genera. Le eccezioni sono problemi che rendono il flusso di controllo instabile, e devo avere una strategia di gestione, altrimenti possono essere dannose.
-	\item \textbf{Relative al trascorrere del tempo}, ci possono essere degli impegni che il programma si è preso nei confronti dell'utente (es. mi aspetto che il programma risponda in tot secondi). Devo mettere quindi un limite rispetto al quale mi aspetto qualcosa. L'utente si immagina che il sistema garantisca delle funzionalità in un tempo finito.
+	\item \textbf{Relativi al flusso di dati}: non posso assumere che l'utente inserisca sempre dati corretti, ma allo stesso tempo non posso accettare \textit{spazzatura}. Sugli input non posso fare assunzioni ottimistiche. Problematiche relative alla disponibilità di un dato;
+	\item \textbf{Relativo al flusso di controllo}: le azioni che avvengono, gestione di eccezioni che io sollevo o che il sistema genera. Le eccezioni sono problemi che rendono il flusso di controllo instabile, e devo avere una strategia di gestione, altrimenti possono essere dannose;
+	\item \textbf{Relative al trascorrere del tempo}: ci possono essere degli impegni che il programma si è preso nei confronti dell'utente (es. mi aspetto che il programma risponda in tot secondi). Devo mettere quindi un limite rispetto al quale mi aspetto qualcosa. L'utente si immagina che il sistema garantisca delle funzionalità in un tempo finito.
 
 \end{itemize}
 
-Mai programmare e progettare immaginando che le cose vadano a buon fine, fare sempre delle assunzioni pessimistiche. Si può fare progettazione parallela solo se ho costruito un'architettura progettuale che garantisca il disaccoppiamento. Devo garantire l'integrità concettuale, desiderabile in ogni architettura di sistema. L'architettura non è \textit{assembleare}, si fanno scelte su buone norme di progettazione che stanno all'architetto (progettista). Il raccordo tra programmazione e progettazione deve essere esplicito, ci deve essere coerenza. \textbf{Enforce intentions}, l'atto di assicurarsi conformità, "fai in modo che il codice realizzi precisamente le indicazioni della progettazione". Ciò che dico nell'architettura deve essere vero nel codice. La programmazione non deve fare scelte libere, ma rispettare la progettazione. Fare \textbf{programmazione difensiva}, essere esplicitamente pronti a trattare errori, si fa in due modi:
+Mai programmare e progettare immaginando che le cose vadano a buon fine, fare sempre delle assunzioni pessimistiche. Si può fare progettazione parallela solo se ho costruito un'architettura progettuale che garantisca il disaccoppiamento. Devo garantire l'integrità concettuale, desiderabile in ogni architettura di sistema. L'architettura non è \textit{assembleare}, si fanno scelte su buone norme di progettazione che stanno all'architetto (progettista). Il raccordo tra programmazione e progettazione deve essere esplicito, ci deve essere coerenza. \textbf{Enforce intentions}, l'atto di assicurarsi conformità, ``fai in modo che il codice realizzi precisamente le indicazioni della progettazione''. Ciò che dico nell'architettura deve essere vero nel codice. La programmazione non deve fare scelte libere, ma rispettare la progettazione. Fare \textbf{programmazione difensiva}, essere esplicitamente pronti a trattare errori, si fa in due modi:
 
 \begin{itemize}
 
-	\item \textbf{Incapsulamento degli errori}, in tutti i luoghi del codice dove so che posso non avere successo devo poter gestire l'errore. Programmare esplicitamente il trattamento dei possibili errori, \textbf{errori dei dati in ingresso} ed errori logici;
+	\item \textbf{Incapsulamento degli errori}: in tutti i luoghi del codice dove so che posso non avere successo devo poter gestire l'errore. Programmare esplicitamente il trattamento dei possibili errori, \textbf{errori dei dati in ingresso} ed errori logici;
 	\item La strategia di trattamento va prevista nella progettazione.
 
 \end{itemize}
@@ -72,11 +36,11 @@ Fonti di errori logici:
 
 \begin{itemize}
 
-	\item \textbf{Aritmetica in virgola mobile}, la sua approssimazione può cumularsi e condurre a errori importanti e a confronti svianti. Essa è intrisecamente imprecisa, sono operazioni spesso fonti di errore;
-	\item \textbf{Puntatori e limiti delle strutture}, i puntatori sono in generale molto pericolosi. Nel momento in cui manipolo indirizzi porto cose ovunque (\textit{segmentation fault}). Devo avere una programmazione che mi garantisca che queste cose non accadano. Voglio imporre che ai dati ci si acceda attraverso \textit{metodi di interfaccia};
-	\item \textbf{Allocazione dinamica della memoria}, può portare a esaurimento della disponibilità e alla sovrapposizione di aree sensibili (il garbage collector arriva di tanto in tanto...). CHi fa un programma deve sapere quante \textit{new} può fare (oppure non le fa);
-	\item \textbf{Ricorsione}, può portare all'esaurimento della memoria o alla non terminazione. La ricorsione in ogni applicativo ragionevolmente serio è un concetto \textbf{proibito}, consuma lo stack. La combinazione di \textit{new} e ricorsione è ancora peggio;
-	\item \textbf{Concorrenza}, se mal progettata può condurre a errori.
+	\item \textbf{Aritmetica in virgola mobile}: la sua approssimazione può cumularsi e condurre a errori importanti e a confronti svianti. Essa è intrisecamente imprecisa, sono operazioni spesso fonti di errore;
+	\item \textbf{Puntatori e limiti delle strutture}: i puntatori sono in generale molto pericolosi. Nel momento in cui manipolo indirizzi porto cose ovunque (\textit{segmentation fault}). Devo avere una programmazione che mi garantisca che queste cose non accadano. Voglio imporre che ai dati ci si acceda attraverso \textit{metodi di interfaccia};
+	\item \textbf{Allocazione dinamica della memoria}: può portare a esaurimento della disponibilità e alla sovrapposizione di aree sensibili (il garbage collector arriva di tanto in tanto...). Chi fa un programma deve sapere quante \textit{new} può fare (oppure non le fa);
+	\item \textbf{Ricorsione}: può portare all'esaurimento della memoria o alla non terminazione. La ricorsione in ogni applicativo ragionevolmente serio è un concetto \textbf{proibito}, consuma lo stack. La combinazione di \textit{new} e ricorsione è ancora peggio;
+	\item \textbf{Concorrenza}: se mal progettata può condurre a errori.
 
 \end{itemize}
 
@@ -84,22 +48,22 @@ Fonti di errori logici:
 
 \begin{itemize}
 
-	\item \textbf{Verifica}, "ho fatto il sistema nel modo giusto";
-	\item \textbf{Validazione}, "ho fatto il sistema giusto".
+	\item \textbf{Verifica}: ``ho fatto il sistema nel modo giusto'';
+	\item \textbf{Validazione}: ``ho fatto il sistema giusto''.
 
 \end{itemize}
 
-La \textit{software verification} ricerca la completezza e la correttezza del software e tratta ciò che lo supporta. Consente di valutare di conseguenza che il sw sia validato. La verifica è a supporto della validazione e la validazione è l'ultima cosa che faccio in un progetto. La verifica è un attività che svolgo durante \textbf{tutto lo sviluppo} fino all'ultimo istante dove farò validazione, che servirà a dire che ciò che ho fatto è la cosa giusta. La verifica va fatta per impedire che la risposta finale non sia sbagliata. Devo garantire tre cose importanti:
+La \textit{software verification} ricerca la completezza e la correttezza del software e tratta ciò che lo supporta. Consente di valutare di conseguenza che il software sia validato. La verifica è a supporto della validazione e la validazione è l'ultima cosa che faccio in un progetto. La verifica è un attività che svolgo durante \textbf{tutto lo sviluppo} fino all'ultimo istante dove farò validazione, che servirà a dire che ciò che ho fatto è la cosa giusta. La verifica va fatta per impedire che la risposta finale non sia sbagliata. Devo garantire tre cose importanti:
 
 \begin{itemize}
 
-	\item \textbf{Consistenza}, "sono ciò che vi attendevate fossi";
-	\item \textbf{Correttezza}, "ciò che ho conseguito è corretto rispetto alle norme";
-	\item \textbf{Completezza}, "tutto ciò che ho creato è tutto ciò era atteso".
+	\item \textbf{Consistenza}: ``sono ciò che vi attendevate fossi'';
+	\item \textbf{Correttezza}: ``ciò che ho conseguito è corretto rispetto alle norme'';
+	\item \textbf{Completezza}: ``tutto ciò che ho creato è tutto ciò era atteso''.
 
 \end{itemize}
 
-Sono tre caratteristiche di cui devo accertare l'esistenza su tutti i prodotti parziali dello sviluppo. Il verificatore impara le norme e dice che quello che è stato fornito è fatto come richiesto. Non corregge nè rifà il lavoro ma controlla solo che tutto rispetti le tre caratteristiche. La validazione conseguentemente è una conferma \textbf{by examination}, mostra copertura dei requisiti (utente e sw).
+Sono tre caratteristiche di cui devo accertare l'esistenza su tutti i prodotti parziali dello sviluppo. Il verificatore impara le norme e dice che quello che è stato fornito è fatto come richiesto. Non corregge nè rifà il lavoro ma controlla solo che tutto rispetti le tre caratteristiche. La validazione conseguentemente è una conferma \textbf{by examination}, mostra copertura dei requisiti (utente e software).
 
 \begin{center}
 \includegraphics[width=0.75\columnwidth]{img1} % Example image
@@ -115,8 +79,8 @@ Per il verificatore ho due forme di \textbf{analisi}:
 
 \begin{itemize}
 
-	\item \textbf{Analisi statica}, non richiede l'esecuzione del programma, studia le caratteristiche del codice sorgente (e a volte anche del codice oggetto);
-	\item \textbf{Analisi dinamica}, richiede l'esecuzione del programma, viene effettuata tramite \textbf{test}, usata sia nella verifica che nella validazione.
+	\item \textbf{Analisi statica}: non richiede l'esecuzione del programma, studia le caratteristiche del codice sorgente (e a volte anche del codice oggetto);
+	\item \textbf{Analisi dinamica}: richiede l'esecuzione del programma, viene effettuata tramite \textbf{test}, usata sia nella verifica che nella validazione.
 
 \end{itemize}
 
@@ -124,16 +88,16 @@ Fissare alcune caratteristiche dell'ambiente dinamico:
 
 \begin{itemize}
 
-	\item \textbf{Ripetibilità}, è un requisito essenziale. Dobbiamo assumere uno stato inziale prima dell'esecuzione. IL test deve essere \textbf{deterministico} ed eseguire le cose secondo un ordine noto. Lo stato iniziale è tutto ciò che ha influenza diretta o indiretta sull'esecuzione, e devo sapere qual'è. \textbf{Specifica di un test};
+	\item \textbf{Ripetibilità}: è un requisito essenziale. Dobbiamo assumere uno stato inziale prima dell'esecuzione. Il test dev'essere \textbf{deterministico} ed eseguire le cose secondo un ordine noto. Lo stato iniziale è tutto ciò che ha influenza diretta o indiretta sull'esecuzione, e devo sapere qual'è. \textbf{Specifica di un test};
 	\item \textbf{Strumenti}:
 	\begin{itemize}
 
-		\item \textbf{Driver}, componente attiva fittizia per pilotare una parte;
-		\item \textbf{Stub}, componente passiva fittizia per simulare una parte;
-		\item \textbf{Logger}, componente non intrusiva di registrazione dei dati di esecuzione per l'analisi dei risultati. Ogni tanto deve lasciare traccia del suo esito;	
+		\item \textbf{Driver}: componente attiva fittizia per pilotare una parte;
+		\item \textbf{Stub}: componente passiva fittizia per simulare una parte;
+		\item \textbf{Logger}: componente non intrusiva di registrazione dei dati di esecuzione per l'analisi dei risultati. Ogni tanto deve lasciare traccia del suo esito.	
 	
 	\end{itemize}
-	\item \textbf{Unità}, un insieme piccolo di classi che è possibile assegnare a un programmatore. La più piccola unità sw che è conveniente verificare singolarmente.
+	\item \textbf{Unità}: un insieme piccolo di classi che è possibile assegnare a un programmatore. La più piccola unità software che è conveniente verificare singolarmente.
 
 \end{itemize}
 
@@ -146,7 +110,3 @@ Una volta verificata ogni singola unità metto insieme quelle raggruppate e facci
 \begin{center}
 \includegraphics[width=0.75\columnwidth]{img4} % Example image
 \end{center}
-
-
-
-\end{document}

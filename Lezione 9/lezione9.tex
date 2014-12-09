@@ -1,55 +1,21 @@
-\input{../Templates/layout}
-\input{../Templates/commands}
+\section{Lezione 9}
 
-% Set up the header and footer
-\pagestyle{fancy}
-\lhead{\lessonAuthor{Luca De Franceschi}} % Top left header
-\chead{\lessonAuthor{Tullio Vardanega}\ \lessonTime{11:30}: \lessonNumber{9}} % Top center header
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\textbf{Configurazione}, devo conoscere tutte le parti di un sistema, \textbf{C}onfiguration \textbf{M}anagement \textbf{D}atabase. Spesso nei team c'è una persona che si occupa della configurazione. In un progetto, tipicamente, l'albero della base di dati è molto complesso, nel nostro progetto è molto più semplice in realtà. Elementi di configurazione (\textbf{CI}, configuration items). In un sistema reale la base di dati è essenziale, perchè devo poter interrogarlo sui vari item. La configurazione è fatta di nodi che evolvono, perché ciascun nodo ha una storia ed essa viene modificata. Prima ho la configurazione (\textit{system breakdown}, decomposizione del sistema). Gli elementi in questo albero sono i CI. Alcuni nodi costituiscono un raggruppamento che descrive un preciso stato del sistema (\textit{baseline}) che rappresenta il ``punto di copertura'' di uno stadio da parte di un team. Avrò un numero non fisso di baseline, che servono a darmi certezza di progresso. La prima certezza la voglio sui requisiti (\textit{requirements baseline}). Una baseline è una raccolta di CI, ciascuna con la sua storia. Ho bisogno di uno strumento che mi dica da quali CI è costituita una baseline. Conseguentemente, una baseline va documentata. Esiste dunque un'attività aggiuntiva che si chiama \textbf{controllo di configurazione}. Questa attività è molto delicata, perchè mi dice lo stato di avanzamento del prodotto. La modifica è un atto che deve essere formalmente approvato, perchè è un processo su cui vogliamo iterare. Occorre introdurre un sistema rigido di gestione delle modifiche che vengano fatte a fronte di una \textbf{richiesta}. Si cambia la baseline cambiando una o più CI che cambiano la loro versione. Chi vuole cambiare deve avere un motivo per cui valga la pena, quindi serve un documento che va ad un'autorità delegata, per capire se il cambiamento è accettabile o no (autorità che si chiama ``gruppo di decisione'', \textit{Change Management Board}, CMB). Questo gruppo valuta se il cambiamento è accettabile e lancia un ticket per il cambiamento. Chi fa queste azioni reimmette nel sistema il dato modificato. Fare un cambiamento produce un flusso di lavoro, e quindi comporta un costo. Normalmente il responsabile di progetto è parte di questo gruppo. La configurazione evolve attraverso il change management.
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\lessonNumber{9}}\\
-\normalsize\vspace{0.1in}\small{\lessonDate{Mercoledì}{23}{Ottobre}{2013}}\\
-\vspace{0.1in}\large{\textit{\lessonTeacher{Tullio Vardanega},\ \lessonTime{11:30-13:15}}}
-\vspace{3in}
-}
-}
-
-\author{\textbf{\lessonAuthor{Luca De Franceschi}}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle
-\newpage
-\newpage
-
-\textbf{Configurazione}, devo conoscere tutte le parti di un sistema, \textbf{C}onfiguration \textbf{M}anagement \textbf{D}atabase. Spesso nei team c'è una persona che si occupa della configurazione. In un progetto, tipicamente, l'albero della base di dati è molto complesso, nel nostro progetto è molto più semplice in realtà. Elementi di configurazione (\textbf{CI}, configuration items). In un sistema reale la base di dati è essenziale, perchè devo poter interrogarlo sui vari item. La configurazione è fatta di nodi che evolvono, perché ciascun nodo ha una storia ed essa viene modificata. Prima ho la configurazione (\textit{system breakdown}, decomposizione del sistema). Gli elementi in questo albero sono i CI. Alcuni nodi costituiscono un raggruppamento che descrive un preciso stato del sistema (\textit{baseline}) che rappresenta il "punto di copertura" di uno stadio da parte di un team. Avrò un numero non fisso di baseline, servono a darmi certezza di progresso. La prima certezza la voglio sui requisiti (\textit{requirements baseline}). Una baseline è una raccolta di CI, ciascuna con la sua storia. Ho bisogno di uno strumento che mi dica da quali CI è costituita una baseline. Conseguentemente, una baseline va documentata. Esiste dunque un'attività aggiuntiva che si chiama \textbf{controllo di configurazione}. Questa attività è molto delicata perchè mi dice lo stato di avanzamento del prodotto. La modifica è un atto che deve essere formalmente approvato, perchè è un processo sui cui vogliamo iterare. Occorre introdurre un sistema rigido di gestione delle modifiche che vengano fatte a fronte di una \textbf{richiesta}. Si cambia la baseline cambiando una o più CI che cambiano la loro versione. Chi vuole cambiare deve avere un motivo per cui valga la pena, quindi serve un documento che va ad un'autorità delegata, per capire se il cambiamento è accettabile o no (autorità che si chiama "gruppo di decisione", \textit{Change Management Board}, CMB). Questo gruppo valuta se il cambiamento è accettabile e lancia un ticket per il cambiamento. Chi fa queste azioni reimmette nel sistema il dato modificato. Fare un cambiamento produce un flusso di lavoro, e quindi comporta un costo. Normalmente il responsabile di progetto è parte di questo gruppo. La configurazione evolve attraverso il change management.\\
-
-Il \textbf{versionamento} deve essere automatizzato. Si appoggia su una \textit{repository}, che è un servizio aggiornato alla \textit{best practice}. Devo usare un sistema di versionamento già esistente e moderno, supportato dalla tecnologia "\textit{cloud}" (es. Git). Voglio che il versionamento e la configurazione siano insieme. Le modifiche le faccio sullo spazio locale e poi le reimmetto nella repository quando sono convinto che quello che ho fatto è buono, facendo un \textit{update}. Deve essere funzionante in modo robusto al modo concorrente (\textit{data race}). Questa cosa si risolve in due modi:
+Il \textbf{versionamento} deve essere automatizzato. Si appoggia su un \textit{repository}, che è un servizio aggiornato alla \textit{best practice}. Devo usare un sistema di versionamento già esistente e moderno, supportato dalla tecnologia ``\textit{cloud}'' (es. Git con Github). Voglio che il versionamento e la configurazione siano insieme. Le modifiche le faccio sullo spazio locale e poi le reimmetto nella repository quando sono convinto che quello che ho fatto è buono, facendo un \textit{update}. Deve essere funzionante in modo robusto al modo concorrente (\textit{data race}). Questa cosa si risolve in due modi:
 
 \begin{itemize}
 
 	\item \textbf{Locking};
-	\item procedura che assicura un invariante, che su un singolo CI lavori in ogni istante al più una persona. Applico questo invariante sui tickets.
+	\item Una procedura che assicura un invariante, che su un singolo CI lavori in ogni istante al più una persona. Applico questo invariante sui tickets.
 
 \end{itemize}
 
-Ogni singolo CI ha quindi una storia ramificata che non è necessariamente simmetrica con la versione del sistema. La storie possono essere lineari o ramificate quando ho delle varianti in cui ho più requisiti in contrasto. Il \textbf{branching} è una diramazione rispetto al \textbf{trunk} (tronco) principale. Devo essere capace di distinguere ciò che c'è nella diramazione da ciò che c'è sul sistema. No solo nel codice ci devono essere le modifiche ma anche nella repository devo avere un \textit{log}. Nell'oggetto cambiato c'è scritto cosa e cambiato, quando e perchè.\\
-\textbf{Strumenti di lavoro}, molto aldilà del semplice editor di programmi e compilatore...\\
-\textbf{Procedure di progetti}, le attività sono sistematiche, disciplinate e quantificabili. Ciò che dà disciplina alle attività sono le norme sancite. Sono le regole che di diamo, e non è accettabile che di defletta da queste. Le norme sono l'essenza, salvaguardano la collaborazione. In un gruppo di lavoro mi devo affidare ad un modello rigido che si chiama appunto \textit{norme}. Si distingue in due categorie:
+Ogni singolo CI ha quindi una storia ramificata che non è necessariamente simmetrica con la versione del sistema. La storie possono essere lineari o ramificate quando ho delle varianti in cui ho più requisiti in contrasto. Il \textbf{branching} è una diramazione rispetto al \textbf{trunk} (tronco) principale. Devo essere capace di distinguere ciò che c'è nella diramazione da ciò che c'è sul sistema. No solo nel codice ci devono essere le modifiche ma anche nella repository devo avere un \textit{log}. Nell'oggetto cambiato c'è scritto cosa è cambiato, quando e perchè.
+
+\textbf{Strumenti di lavoro}, molto aldilà del semplice editor di programmi e compilatore...
+
+\textbf{Procedure di progetti}, le attività sono sistematiche, disciplinate e quantificabili. Ciò che dà disciplina alle attività sono le norme sancite. Sono le regole che di diamo, e non è accettabile che si defletta da queste. Le norme sono l'essenza, salvaguardano la collaborazione. In un gruppo di lavoro mi devo affidare ad un modello rigido che si chiama appunto \textit{norme}. Si distinguono in due categorie:
 
 \begin{itemize}
 
@@ -58,7 +24,7 @@ Ogni singolo CI ha quindi una storia ramificata che non è necessariamente simme
 
 \end{itemize}
 
-Una regola non si discute, una raccomandazione è invece opinabile. Le norme vanno scritte in un documento. Un documento che il gruppo dovrà avere sarà le "\textit{Norme di progetto}", un insieme di regole a cui il gruppo deve aderire. E' il fattore umano che rende le regole difficili e permeabili. Costruire questo filtro comporta un costo e una fatica iniziale, ma porta a miglioramenti poi. Le regole sono buone se sono facilmente applicabili e non vanno lasciate a discrezione degli esseri umani. Ci sono alcune pratiche di buonsenso per evitare errori:
+Una regola non si discute, una raccomandazione è invece opinabile. Le norme vanno scritte in un documento. Un documento che il gruppo dovrà avere sarà le \textbf{Norme di progetto}, un insieme di regole a cui il gruppo deve aderire. È il fattore umano che rende le regole difficili e permeabili. Costruire questo filtro comporta un costo e una fatica iniziale, ma porta a miglioramenti poi. Le regole sono buone se sono facilmente applicabili e non vanno lasciate a discrezione degli esseri umani. Ci sono alcune pratiche di buonsenso per evitare errori:
 
 \begin{itemize}
 
@@ -68,14 +34,14 @@ Una regola non si discute, una raccomandazione è invece opinabile. Le norme van
 
 \end{itemize}
 
-La parte più importante di un pezzo di codice si chiama \textbf{modulo}. Questa cosa è l'intestazione (o \textit{header}) che deve dirmi tutto di quel modulo (cosa fa, chi l'ha fatto, copyright, copyleft, avvertenze...). Serve una strategia forte per costringere i programmatori a lavorare come si conviene.\\\\
+La parte più importante di un pezzo di codice si chiama \textbf{modulo}. Questa cosa è l'intestazione (o \textit{header}) che deve dirmi tutto di quel modulo (cosa fa, chi l'ha fatto, copyright, copyleft, avvertenze...). Serve una strategia forte per costringere i programmatori a lavorare come si conviene.
 
 L'attività di \textbf{analisi dei requisiti} è importantissima, comporta molte competenze ed è complessa, per cui viene chiamata \textbf{Ingegneria dei requisiti}. Un requisito può essere visto da due lati:
 
 \begin{itemize}
 
 	\item Dal lato di chi lo chiede (\textbf{vista cliente});
-	\item Dal lato di chi lo soddisfa (\textbf{Vista fornitore})
+	\item Dal lato di chi lo soddisfa (\textbf{Vista fornitore}).
 
 \end{itemize}
 
@@ -83,8 +49,8 @@ Dovrò prima interrogare gli stakeholders e poi chiedermi cosa serve a me per so
 
 \begin{itemize}
 
-	\item Assicurare che siano individualmente verificabili;
-	\item Assicurare che siano individualmente effettuabili.
+	\item Assicurare che siano individualmente \textbf{verificabili};
+	\item Assicurare che siano individualmente \textbf{effettuabili}.
 
 \end{itemize}
 
@@ -96,5 +62,3 @@ La \textbf{verifica} e la \textbf{validazione} formano la \textbf{qualifica}.
 	\item La validazione va ad accertarsi che i requisiti siano soddisfatti (\textit{did I build the right system?}).
 
 \end{itemize}
-
-\end{document}

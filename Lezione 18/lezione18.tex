@@ -1,44 +1,8 @@
-\input{../Templates/layout}
-\input{../Templates/commands}
+\section{Lezione 18}
 
-% Set up the header and footer
-\pagestyle{fancy}
-\lhead{\lessonAuthor{Luca De Franceschi}} % Top left header
-\chead{\lessonAuthor{Tullio Vardanega}\ \lessonTime{9:30}: \lessonNumber{18}} % Top center header
-\rhead{\firstxmark} % Top right header
-\lfoot{\lastxmark} % Bottom left footer
-\cfoot{} % Bottom center footer
-\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
-\renewcommand\headrulewidth{0.4pt} % Size of the header rule
-\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+\textbf{Progettazione Software}
 
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
-\title{
-\vspace{2in}
-\textmd{\textbf{\lessonNumber{18}}\\
-\normalsize\vspace{0.1in}\small{\lessonDate{Martedì}{19}{Novembre}{2013}}\\
-\vspace{0.1in}\large{\textit{\lessonTeacher{Tullio Vardanega},\ \lessonTime{9:30-11:30}}}
-\vspace{3in}
-}
-}
-
-\author{\textbf{\lessonAuthor{Luca De Franceschi}}}
-\date{} % Insert date here if you want it to appear below your name
-
-%----------------------------------------------------------------------------------------
-
-\begin{document}
-
-\maketitle
-\newpage
-\newpage
-
-\textbf{Progettazione Software}\\\\
-
-Progettare prima di produrre. Finora nella nostra vita abbiamo progettato relativamente poco. La progettazione è un'attività molto importante e complicata. Lo studio è oscurato perché nel mondo veloce dell'informatica conta quello che vediamo e non quello che \textit{sta sotto}. Siamo attenti alla superficie e non alla sostanza. Il software è normalmente poco visibile. Ci sono due tipi di sforzo:
+Progettare prima di produrre. Finora nella nostra vita abbiamo progettato relativamente poco. La progettazione è un'attività molto importante e complicata. Lo studio è oscurato, perché nel mondo veloce dell'informatica conta quello che vediamo e non quello che \textit{sta sotto}. Siamo attenti alla superficie e non alla sostanza. Il software è normalmente poco visibile. Ci sono due tipi di sforzo:
 
 \begin{itemize}
 
@@ -47,19 +11,20 @@ Progettare prima di produrre. Finora nella nostra vita abbiamo progettato relati
 
 \end{itemize}
 
-L'intento è fare scelte buone, cossichè venga ridotto al minimo lo sforzo della verifica (che è costosa), altrimenti pago un costo doppio. Principio di riduzione della complessità. La prima cosa che devo fare in un progetto sw è spezzare i problemi in parti più piccole per poterle governare insieme (\textit{divide et impera}). La progettazione e l'analisi sono due imbuti rovesciati tra loro.
+L'intento è fare scelte buone, cosicchè venga ridotto al minimo lo sforzo della verifica (che è costosa), altrimenti pago un costo doppio. Principio di riduzione della complessità. La prima cosa che devo fare in un progetto software è spezzare i problemi in parti più piccole per poterle governare insieme (\textit{divide et impera}). La progettazione e l'analisi sono due imbuti rovesciati tra loro.
 
 \begin{center}
 \includegraphics[width=0.75\columnwidth]{img1} % Example image
 \end{center}
 
-C'è un'apertura molto grande fatta per frazionamento (\textit{approccio investigativo}) tipico dell'analista. Tutto non è necessariamente esplicito. Il lavoro del progettista è l'esatto opposto, deve riportare a sintesi i requisiti spezzettati e proporre una delle possibili soluzioni al problema, argomentando il valore di quella soluzione. Si torna da un punto singolare ad un punto singolare. L'analista ha fatto un buon lavoro se i requisiti sono tutti \textbf{tracciabili} e \textbf{verificabili}.\\
+C'è un'apertura molto grande fatta per frazionamento (\textit{approccio investigativo}) tipico dell'analista. Tutto non è necessariamente esplicito. Il lavoro del progettista è l'esatto opposto, deve riportare a sintesi i requisiti spezzettati e proporre una delle possibili soluzioni al problema, argomentando il valore di quella soluzione. Si torna da un punto singolare ad un punto singolare. L'analista ha fatto un buon lavoro se i requisiti sono tutti \textbf{tracciabili} e \textbf{verificabili}.
+
 Dijkstra afferma che il compito che sta a un progettista di fare in modo che soddisfi i nostri bisogni è fatto di due parti:
 
 \begin{itemize}
 
-	\item \textbf{Stabilire le proprietà} di quella cosa in virtù delle quali soddisfo le proprietà attese e i bisogni. Questo è il compito dell'analista.
-	\item \textbf{Fare quella cosa} in modo tale che le proprietà attese ci siano. E' quello che fa il progettista.
+	\item \textbf{Stabilire le proprietà} di quella cosa in virtù delle quali soddisfo le proprietà attese e i bisogni. Questo è il compito dell'analista;
+	\item \textbf{Fare quella cosa} in modo tale che le proprietà attese ci siano. È quello che fa il progettista.
 
 \end{itemize}
 
@@ -67,15 +32,15 @@ Uno dei compiti che aiuta il progettista è \textbf{fissare un'architettura}, cio
 
 \begin{itemize}
 
-	\item \textbf{Committente}, che ha la visione del prodotto;
-	\item \textbf{Fornitore}, confini del lavoro commissionato;
-	\item \textbf{Analista}, che fissa vincoli e rischi tecnologici;
-	\item \textbf{Progettista} che ha il compito di portare alla sintesi;
-	\item \textbf{Architetto}
+	\item \textbf{Committente}: che ha la visione del prodotto;
+	\item \textbf{Fornitore}: confini del lavoro commissionato;
+	\item \textbf{Analista}: che fissa vincoli e rischi tecnologici;
+	\item \textbf{Progettista}: che ha il compito di portare alla sintesi;
+	\item \textbf{Architetto}.
 
 \end{itemize}
 
-Un progettista che lavora strettamente sul progetto fa \textbf{scelte tattiche} sul breve periodo, mentre un architetto ha \textbf{governance}, ha una visione sul lungo periodo. Vogliamo che il progettista si avvicini il più possibile all'architetto. \textbf{Architettura come un mezzo} per raggiungere un fine. L'architettura ha una soluzione che è costruttiva e si può fare, è fatta di scelte costruttive che si amalgamano molto bene insieme. ``\textit{L'arte è un fine, l'architettura un mezzo}'' (Wells). Prima della fine degli anni '80 l'architettura veniva. L applicata solamente al sistema fisico. La nozione di architettura software appare per la prima volta nel 1992. Architettura sw fatta di:
+Un progettista che lavora strettamente sul progetto fa \textbf{scelte tattiche} sul breve periodo, mentre un architetto ha \textbf{governance}, ha una visione sul lungo periodo. Vogliamo che il progettista si avvicini il più possibile all'architetto. \textbf{Architettura come un mezzo} per raggiungere un fine. L'architettura ha una soluzione che è costruttiva e si può fare, è fatta di scelte costruttive che si amalgamano molto bene insieme. ``\textit{L'arte è un fine, l'architettura un mezzo}'' (Wells). Prima della fine degli anni '80 l'architettura veniva applicata solamente al sistema fisico. La nozione di architettura software appare per la prima volta nel 1992. Architettura software fatta di:
 
 \begin{itemize}
 
@@ -85,7 +50,7 @@ Un progettista che lavora strettamente sul progetto fa \textbf{scelte tattiche} 
 
 \end{itemize}
 
-Dobbiamo cercare queste tre cose. Architettura sw come insieme di \textbf{componenti}, \textbf{connessioni} e \textbf{vincoli}.
+Dobbiamo cercare queste tre cose. Architettura software come insieme di \textbf{componenti}, \textbf{connessioni} e \textbf{vincoli}.
 
 \begin{itemize}
 
@@ -109,33 +74,36 @@ Assunto di aver capito  questo, cerchiamo quali sono le qualità da perseguire in
 
 \begin{itemize}
 
-	\item \textbf{Sufficienza}, ho tutto ciò che mi serve;
-	\item \textbf{Comprensibilità}, non dev'essere astratto ma comprensibile agli stakeholder, tutto deve risultare chiaro;
-	\item \textbf{Modularità}, fatta di parti facilmente riproducibili e distinte;
-	\item \textbf{Robustezza}, se per caso un modulo fallisce non deve cadere l'intero sistema, non possiamo assumere che tutti i programmatori non commettano errori;
-	\item \textbf{Flessibilità}, il maggior valore di un prodotto è \textbf{per quanto esso è in uso}. L'uso lungo richiederà manutenzione. Bisognerà avere una struttura che permette facilmente l'adattamento,;
-	\item \textbf{Riusabilità}, architettura riadattabile a molti altri sistemi, sia nell'insieme che nelle parti;
-	\item \textbf{Efficienza} nel tempo, nello spazio, nelle comunicazioni. Consumare il meno possibile.
-	\item \textbf{Affidabilità}, nessun \textit{effetto sorpresa}, riesco a fare ciò che è atteso;
-	\item \textbf{Disponibilità}, necessita di poco o nullo tempo di manutenzione \textit{fuori linea};
+	\item \textbf{Sufficienza}: ho tutto ciò che mi serve;
+	\item \textbf{Comprensibilità}: non dev'essere astratto ma comprensibile agli stakeholders, tutto deve risultare chiaro;
+	\item \textbf{Modularità}: fatta di parti facilmente riproducibili e distinte;
+	\item \textbf{Robustezza}: se per caso un modulo fallisce non deve cadere l'intero sistema, non possiamo assumere che tutti i programmatori non commettano errori;
+	\item \textbf{Flessibilità}: il maggior valore di un prodotto è \textbf{per quanto esso è in uso}. L'uso lungo richiederà manutenzione. Bisognerà avere una struttura che permette facilmente l'adattamento;
+	\item \textbf{Riusabilità}: architettura riadattabile a molti altri sistemi, sia nell'insieme che nelle parti;
+	\item \textbf{Efficienza}: nel tempo, nello spazio, nelle comunicazioni. Consumare il meno possibile;
+	\item \textbf{Affidabilità}: nessun \textit{effetto sorpresa}, riesco a fare ciò che è atteso;
+	\item \textbf{Disponibilità}: necessita di poco o nullo tempo di manutenzione \textit{fuori linea};
 	\item \textbf{Sicurezza rispetto a intrusioni};
 	\item \textbf{Sicurezza rispetto al funzionamento};
-	\item \textbf{Semplicità}, ogni parte contiene il necessario e niente di \textit{superfluo};
-	\item \textbf{Incapsulamento} (information hiding), nascondo il dettaglio, mostro solo il necessario. Tutto ciò che non è rilevante lo nascondo;
-	\item \textbf{Coesione}, le parti che stanno insieme hanno gli stessi obiettivi;
-	\item \textbf{Basso accoppiamento}, una modifica ha impatto minimo con gli altri. Le modifiche locali non devono avere effetto sul globale.
+	\item \textbf{Semplicità}: ogni parte contiene il necessario e niente di \textit{superfluo};
+	\item \textbf{Incapsulamento} (information hiding): nascondo il dettaglio, mostro solo il necessario. Tutto ciò che non è rilevante lo nascondo;
+	\item \textbf{Coesione}: le parti che stanno insieme hanno gli stessi obiettivi;
+	\item \textbf{Basso accoppiamento}: una modifica ha impatto minimo con gli altri. Le modifiche locali non devono avere effetto sul globale.
 
 \end{itemize}
 
-Soffermiamoci sulla \textbf{semplicità}. ``\textit{La mplteplicità non è da assumere senza la necessità}'', principio di rimozione, devo togliere tutto ciò che non è necessario. Principio noto come ``\textit{il rasoio di Occam}''. ``\textit{Ogni cosa dovrebbe essere il più semplice possibile, ma non di più}'' (Albert Einstein).\\
-L'incapsulamento è un grande beneficio per la manutenzione, perchè i cambi locali hanno poca influenza sul globale. Questo è il principio del \textit{black box}''.\\
-L'accoppiamento è il processo per il quale io dipendo dall'esterno, e questo è misurabile. E' fatto da due cose: \textbf{utilità} e \textbf{bisogno}. Massimo di utilità e minimo di indipendenza.
+Soffermiamoci sulla \textbf{semplicità}. ``\textit{La molteplicità non è da assumere senza la necessità}'', principio di rimozione, devo togliere tutto ciò che non è necessario. Principio noto come ``\textit{il rasoio di Occam}''. ``\textit{Ogni cosa dovrebbe essere il più semplice possibile, ma non di più}'' (Albert Einstein).
+
+L'incapsulamento è un grande beneficio per la manutenzione, perchè i cambi locali hanno poca influenza sul globale. Questo è il principio del \textit{black box}.
+
+L'accoppiamento è il processo per il quale io dipendo dall'esterno, e questo è misurabile. È fatto da due cose: \textbf{utilità} e \textbf{bisogno}. Massimo di utilità e minimo di indipendenza.
 
 \begin{center}
 \includegraphics[width=0.75\columnwidth]{img2} % Example image
 \end{center}
 
-All'inizio della progettazione devo avere sicuramente uno stile architetturale, ma dopo devo scegliere un \textit{approccio progettuale} al sistema. Decomporre il sistema e identificarne le parti (\textbf{top-down}); ma questo non è lo stile \textit{object-oriented} che invece è \textbf{bottom-up}. Inizia da parti già esistenti e le specializza (principio del \textbf{riuso}). Per fare progettazione bottom-up serve molta esperienza, l'alternativa è spezzare in parti più semplici. L'approccio normalmente utilizzato è un \textbf{compromesso} fra queste due tecniche, \textbf{meet-in-the-middle}, un approccio intermedio, ed è quello più frequentemente utilizzato.\\
+All'inizio della progettazione devo avere sicuramente uno stile architetturale, ma dopo devo scegliere un \textit{approccio progettuale} al sistema. Decomporre il sistema e identificarne le parti (\textbf{top-down}); ma questo non è lo stile \textit{object-oriented}, che invece è \textbf{bottom-up}. Inizia da parti già esistenti e le specializza (principio del \textbf{riuso}). Per fare progettazione bottom-up serve molta esperienza, l'alternativa è spezzare in parti più semplici. L'approccio normalmente utilizzato è un \textbf{compromesso} fra queste due tecniche, \textbf{meet-in-the-middle}, un approccio intermedio, ed è quello più frequentemente utilizzato.
+
 Il riuso ha due forme:
 
 \begin{itemize}
@@ -145,10 +113,8 @@ Il riuso ha due forme:
 
 \end{itemize}
 
-Il primo atteggiamento è guardare fuori se ci sono cose utili e abbastanza solide. E' delirante pensare di progettare in proprio. Oggi è sempre più inevitabile/intelligente utilizzare il riuso, soprattutto quello esterno.\\\\
+Il primo atteggiamento è guardare fuori se ci sono cose utili e abbastanza solide. È delirante pensare di progettare in proprio. Oggi è sempre più inevitabile/intelligente utilizzare il riuso, soprattutto quello esterno.
 
-Un \textbf{framework} è il ``quadro di lavoro'', un insieme integrato di componenti software prefabbricate. Impongo un'organizzazione, ciascuno si deve adattare ad esso, usare il suo stile architetturale. Nel mondo \textit{pre-oo} erano chiamate \textbf{librerie}. Mi aiuta a fare delle cose e mi impone uno stile che è stato definito \textbf{buono}. Un framework diventa buono se è giudicato tale dalla comunità dei suoi utenti (presumibilmente utenti esperti).\\\\
+Un \textbf{framework} è il ``quadro di lavoro'', un insieme integrato di componenti software prefabbricate. Impongo un'organizzazione, ciascuno si deve adattare ad esso, usare il suo stile architetturale. Nel mondo \textit{pre-oo} erano chiamate \textbf{librerie}. Mi aiuta a fare delle cose e mi impone uno stile che è stato definito \textbf{buono}. Un framework diventa buono se è giudicato tale dalla comunità dei suoi utenti (presumibilmente utenti esperti).
 
-Un \textbf{pattern} lo possiamo intendere come un \textit{motivo}, uno \textit{stile ricorrente} che sappiamo riconoscere e che ha un ruolo preciso. Vogliamo portare un pattern dentro una progettazione architetturale. E' molto importante affidarci ad un pattern. Questo concetto è stato donato al mondo del software da \textit{C. Alexander} nel 1979. Al giorno d'oggi un buon progettista software deve assolutamente conoscere i pattern e la loro utilità.
-
-\end{document}
+Un \textbf{pattern} lo possiamo intendere come un \textit{motivo}, uno \textit{stile ricorrente} che sappiamo riconoscere e che ha un ruolo preciso. Vogliamo portare un pattern dentro una progettazione architetturale. È molto importante affidarci ad un pattern. Questo concetto è stato donato al mondo del software da \textit{C. Alexander} nel 1979. Al giorno d'oggi un buon progettista software deve assolutamente conoscere i pattern e la loro utilità.
