@@ -1,4 +1,4 @@
 SWE-Notes
 =========
 
-Conterrà tutti gli appunti in LaTEX del corso di Ingegneria del Software.
+Questo documento racchiude tutti i miei appunti del modulo A del corso di Ingegneria del Software, trascritti nell'anno accademico 2013/2014.
